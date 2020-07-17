@@ -15,10 +15,23 @@ class AgeGroupViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    func segueToCaseload(ageString: String) {
+        let vc = storyboard?.instantiateViewController(identifier: "TabBarVC") as! TabBarVC
+        let vc1 = vc.viewControllers?[0] as! CaseloadViewController
+        let vc2 = vc.viewControllers?[1] as! GroupsViewController
+        vc1.currentAgeGroup = ageString
+        vc2.currentAgeGroup = ageString
+        
+        present(vc, animated: true)
+    }
+    
     @IBAction func schoolAgePressed(_ sender: Any) {
+        segueToCaseload(ageString: "schoolAged")
     }
     @IBAction func elderlyPressed(_ sender: Any) {
+        segueToCaseload(ageString: "Elderly")
     }
     @IBAction func earlyChildhoodPressed(_ sender: Any) {
+        segueToCaseload(ageString: "EarlyChildhood")
     }
 }
