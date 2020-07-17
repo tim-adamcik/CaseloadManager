@@ -11,4 +11,14 @@ import UIKit
 
 class AgeGroupViewController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    @IBAction func schoolAgePressed(_ sender: Any) {
+    }
+    @IBAction func elderlyPressed(_ sender: Any) {
+    }
+    @IBAction func earlyChildhoodPressed(_ sender: Any) {
+    }
 }

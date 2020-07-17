@@ -10,9 +10,24 @@ import UIKit
 
 class SplashViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        activityIndicator.startAnimating()
+        openToLogin()
+    }
+    
+    private func openToLogin() {
+        let vc = storyboard?.instantiateViewController(identifier: "LoginViewController") as! LoginViewController
+        vc.modalPresentationStyle = .fullScreen
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+            self.present(vc, animated: true)
+        }
+        
     }
 
 
