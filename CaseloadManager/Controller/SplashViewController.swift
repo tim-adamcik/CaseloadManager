@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SplashViewController.swift
 //  CaseloadManager
 //
 //  Created by Timothy Adamcik on 7/17/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SplashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
