@@ -18,5 +18,6 @@ class GroupsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         label.text = currentAgeGroup
+        self.navigationController?.isNavigationBarHidden = true
     }
 }

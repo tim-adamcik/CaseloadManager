@@ -13,15 +13,46 @@ class CaseloadViewController: UIViewController {
     
     var currentAgeGroup: String! 
     
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = currentAgeGroup
+        tableView.delegate = self
+        tableView.dataSource = self
+        self.navigationItem.title = currentAgeGroup 
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add Student", style: .plain, target: self, action: #selector(addStudent(_:)))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(goBackToAgeGroupSelection(_:)))
         
         let barViewControllers = self.tabBarController?.viewControllers
-        let svc = barViewControllers![1] as! GroupsViewController
-        svc.currentAgeGroup = currentAgeGroup
+        let svc = barViewControllers![1] as! UINavigationController
+        let secondVC = svc.viewControllers[0] as! GroupsViewController
+        secondVC.currentAgeGroup = currentAgeGroup
+    }
+    
+    @objc func addStudent(_ sender: Any) {
+        
+    }
+    
+    @objc func goBackToAgeGroupSelection(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+}
+
+extension CaseloadViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CaseloadTableViewCell") as! CaseloadTableViewCell
+        cell.title.text = currentAgeGroup
+        cell.subtitle.text = "Student Name"
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 40
     }
     
     

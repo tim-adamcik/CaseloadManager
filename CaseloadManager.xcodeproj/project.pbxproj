@@ -10,6 +10,8 @@
 		BA82751824C258E10083EDA1 /* CaseloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82751724C258E10083EDA1 /* CaseloadViewController.swift */; };
 		BA82751A24C258F10083EDA1 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82751924C258F10083EDA1 /* GroupsViewController.swift */; };
 		BA82751C24C260E90083EDA1 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82751B24C260E90083EDA1 /* TabBarVC.swift */; };
+		BA82751E24C4A6950083EDA1 /* CaseloadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82751D24C4A6950083EDA1 /* CaseloadTableViewCell.swift */; };
+		BA82752024C4A6B70083EDA1 /* GroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82751F24C4A6B70083EDA1 /* GroupsTableViewCell.swift */; };
 		BA8D3AF324C1F9AA009C0389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF224C1F9AA009C0389 /* AppDelegate.swift */; };
 		BA8D3AF524C1F9AA009C0389 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF424C1F9AA009C0389 /* SceneDelegate.swift */; };
 		BA8D3AF724C1F9AA009C0389 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF624C1F9AA009C0389 /* SplashViewController.swift */; };
@@ -25,6 +27,8 @@
 		BA82751724C258E10083EDA1 /* CaseloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseloadViewController.swift; sourceTree = "<group>"; };
 		BA82751924C258F10083EDA1 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		BA82751B24C260E90083EDA1 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		BA82751D24C4A6950083EDA1 /* CaseloadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseloadTableViewCell.swift; sourceTree = "<group>"; };
+		BA82751F24C4A6B70083EDA1 /* GroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewCell.swift; sourceTree = "<group>"; };
 		BA8D3AEF24C1F9AA009C0389 /* CaseloadManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaseloadManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8D3AF224C1F9AA009C0389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA8D3AF424C1F9AA009C0389 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 		BA8D3B0A24C1F9D1009C0389 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BA82751D24C4A6950083EDA1 /* CaseloadTableViewCell.swift */,
+				BA82751F24C4A6B70083EDA1 /* GroupsTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,9 +189,11 @@
 				BA8D3AF724C1F9AA009C0389 /* SplashViewController.swift in Sources */,
 				BA8D3AF324C1F9AA009C0389 /* AppDelegate.swift in Sources */,
 				BA8D3AF524C1F9AA009C0389 /* SceneDelegate.swift in Sources */,
+				BA82751E24C4A6950083EDA1 /* CaseloadTableViewCell.swift in Sources */,
 				BA82751824C258E10083EDA1 /* CaseloadViewController.swift in Sources */,
 				BA82751C24C260E90083EDA1 /* TabBarVC.swift in Sources */,
 				BA82751A24C258F10083EDA1 /* GroupsViewController.swift in Sources */,
+				BA82752024C4A6B70083EDA1 /* GroupsTableViewCell.swift in Sources */,
 				BA8D3B0D24C1FF44009C0389 /* LoginViewController.swift in Sources */,
 				BA8D3B0F24C1FF7C009C0389 /* AgeGroupViewController.swift in Sources */,
 				BA8D3AFD24C1F9AA009C0389 /* CaseloadManager.xcdatamodeld in Sources */,

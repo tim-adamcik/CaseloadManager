@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginBtnPressed(_ sender: Any) {
         
-        let vc = storyboard?.instantiateViewController(identifier: "AgeGroupNC") as! UINavigationController
+        let vc = storyboard?.instantiateViewController(identifier: "AgeGroupViewController") as! AgeGroupViewController
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
     }
