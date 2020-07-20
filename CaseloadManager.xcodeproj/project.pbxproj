@@ -29,6 +29,7 @@
 		BA82754324C5F2040083EDA1 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = BA82753424C5F2030083EDA1 /* OFL.txt */; };
 		BA82754424C5F2040083EDA1 /* Nunito-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA82753524C5F2030083EDA1 /* Nunito-Italic.ttf */; };
 		BA82754524C5F2040083EDA1 /* Nunito-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA82753624C5F2030083EDA1 /* Nunito-LightItalic.ttf */; };
+		BA82754724C61E8B0083EDA1 /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82754624C61E8B0083EDA1 /* GoalTableViewCell.swift */; };
 		BA8D3AF324C1F9AA009C0389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF224C1F9AA009C0389 /* AppDelegate.swift */; };
 		BA8D3AF524C1F9AA009C0389 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF424C1F9AA009C0389 /* SceneDelegate.swift */; };
 		BA8D3AF724C1F9AA009C0389 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF624C1F9AA009C0389 /* SplashViewController.swift */; };
@@ -63,6 +64,7 @@
 		BA82753424C5F2030083EDA1 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		BA82753524C5F2030083EDA1 /* Nunito-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Italic.ttf"; sourceTree = "<group>"; };
 		BA82753624C5F2030083EDA1 /* Nunito-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-LightItalic.ttf"; sourceTree = "<group>"; };
+		BA82754624C61E8B0083EDA1 /* GoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
 		BA8D3AEF24C1F9AA009C0389 /* CaseloadManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaseloadManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8D3AF224C1F9AA009C0389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA8D3AF424C1F9AA009C0389 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			children = (
 				BA82751D24C4A6950083EDA1 /* CaseloadTableViewCell.swift */,
 				BA82751F24C4A6B70083EDA1 /* GroupsTableViewCell.swift */,
+				BA82754624C61E8B0083EDA1 /* GoalTableViewCell.swift */,
 				BA82752724C5F2030083EDA1 /* Nunito */,
 			);
 			path = View;
@@ -268,6 +271,7 @@
 				BA82751824C258E10083EDA1 /* CaseloadViewController.swift in Sources */,
 				BA82752224C5D94A0083EDA1 /* DataModel.swift in Sources */,
 				BA82751C24C260E90083EDA1 /* TabBarVC.swift in Sources */,
+				BA82754724C61E8B0083EDA1 /* GoalTableViewCell.swift in Sources */,
 				BA82751A24C258F10083EDA1 /* GroupsViewController.swift in Sources */,
 				BA82752024C4A6B70083EDA1 /* GroupsTableViewCell.swift in Sources */,
 				BA8D3B0D24C1FF44009C0389 /* LoginViewController.swift in Sources */,
