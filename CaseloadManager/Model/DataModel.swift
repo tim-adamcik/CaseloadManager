@@ -26,6 +26,8 @@ struct StudentGroup {
 struct Student {
     var firstName: String
     var lastName: String
+    var age: Int?
+    var grade: String?
     var studentID: String?
     var caseManager: String?
     var IEPstart: Date?
