@@ -11,15 +11,17 @@ import UIKit
 
 class CaseloadViewController: UIViewController {
     
-    var currentAgeGroup: String! 
-    
     @IBOutlet weak var tableView: UITableView!
+    
+    var currentAgeGroup: String!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        self.navigationItem.title = currentAgeGroup 
+        self.navigationItem.title = currentAgeGroup
+        var ageGroup = AgeGroup(name: currentAgeGroup, students: [])
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add Student", style: .plain, target: self, action: #selector(addStudent(_:)))
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(goBackToAgeGroupSelection(_:)))

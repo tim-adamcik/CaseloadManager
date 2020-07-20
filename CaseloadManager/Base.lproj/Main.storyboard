@@ -351,6 +351,49 @@
             </objects>
             <point key="canvasLocation" x="5452" y="-532"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="C8a-cs-G7I">
+            <objects>
+                <viewController id="WTa-0B-fWN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M2H-qY-7Uo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="1if-U2-IbI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SYA-lT-4mG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6548" y="-236"/>
+        </scene>
+        <!--Add New Student View Controller-->
+        <scene sceneID="sVm-Ii-rVd">
+            <objects>
+                <viewController storyboardIdentifier="AddNewStudentViewController" id="bYc-Gi-W8S" customClass="AddNewStudentViewController" customModule="CaseloadManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vmd-oY-Wb5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQm-LP-kZZ">
+                                <rect key="frame" x="16" y="60" width="382" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Knz-hk-Wr3" firstAttribute="trailing" secondItem="TQm-LP-kZZ" secondAttribute="trailing" constant="16" id="LGQ-zu-IVN"/>
+                            <constraint firstItem="TQm-LP-kZZ" firstAttribute="top" secondItem="Knz-hk-Wr3" secondAttribute="top" constant="16" id="gyI-Bl-EhE"/>
+                            <constraint firstItem="TQm-LP-kZZ" firstAttribute="leading" secondItem="Knz-hk-Wr3" secondAttribute="leading" constant="16" id="t95-qL-t3d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Knz-hk-Wr3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WCH-le-i1a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6548" y="-1023"/>
+        </scene>
         <!--Tab BarVC-->
         <scene sceneID="uIZ-OT-xZg">
             <objects>
