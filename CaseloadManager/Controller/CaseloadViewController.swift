@@ -30,6 +30,7 @@ class CaseloadViewController: UIViewController {
         let svc = barViewControllers![1] as! UINavigationController
         let secondVC = svc.viewControllers[0] as! GroupsViewController
         secondVC.currentAgeGroup = currentAgeGroup
+        
     }
     
     @objc func addStudent(_ sender: Any) {
@@ -42,6 +43,8 @@ class CaseloadViewController: UIViewController {
     @objc func goBackToAgeGroupSelection(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+ 
 }
 
 extension CaseloadViewController: UITableViewDelegate, UITableViewDataSource {

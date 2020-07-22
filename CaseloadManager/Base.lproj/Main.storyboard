@@ -596,14 +596,14 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GoalTableViewCell" id="eQV-aj-LAV" customClass="GoalTableViewCell" customModule="CaseloadManager" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="412" height="78"/>
+                                                <rect key="frame" x="0.0" y="28" width="412" height="78.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eQV-aj-LAV" id="sct-LP-vPq">
-                                                    <rect key="frame" x="0.0" y="0.0" width="412" height="78"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="412" height="78.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FqZ-RH-g11">
-                                                            <rect key="frame" x="36" y="27" width="340" height="24"/>
+                                                            <rect key="frame" x="36" y="27" width="340" height="24.5"/>
                                                             <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -732,6 +732,7 @@
                         <outlet property="enterGradeTextField" destination="Jl5-2Z-SVu" id="jTk-ae-luk"/>
                         <outlet property="firstNameTextField" destination="GMM-tO-hcs" id="WaE-7t-A86"/>
                         <outlet property="lastNameTextField" destination="Yvk-ou-Ak4" id="gem-0L-NYa"/>
+                        <outlet property="scrollView" destination="5xs-wX-G2G" id="CbB-fv-m1R"/>
                         <outlet property="tableView" destination="0CI-GH-CNo" id="819-7A-fhL"/>
                     </connections>
                 </viewController>
