@@ -20,26 +20,33 @@ class AddNewStudentViewController: UIViewController {
     @IBOutlet weak var enterDisorderTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var tbl_height: NSLayoutConstraint!
     
     var activeTextField: UITextField? = nil
+    let disorders = ["Speech", "Language", "Speech and Language", "Cognitive Impairment", "Dysphagia"]
+    let grades = ["Early Childhood", "Pre-K", "K", "1","2","3","4","5","6","7","8","9","10","11","12","Adult"]
+    var pickerView = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         firstNameTextField.delegate = self
         lastNameTextField.delegate = self
-        enterGradeTextField.delegate = self
         enterAgeTextField.delegate = self
         enterCaseManagerTextField.delegate = self
         enterEndDateTextField.delegate = self
-        enterDisorderTextField.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
+        pickerView.delegate = self
+        pickerView.dataSource = self
         firstNameTextField.becomeFirstResponder()
+        enterDisorderTextField.inputView = pickerView
+        enterGradeTextField.inputView = pickerView
         
         NotificationCenter.default.addObserver(self, selector: #selector(AddNewStudentViewController.keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(AddNewStudentViewController.keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
+
     @objc func keyboardWillShow(notification: NSNotification) {
         guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
             // if keyboard size is not available for some reason, dont do anything
@@ -108,7 +115,15 @@ extension AddNewStudentViewController: UITextFieldDelegate {
 
 extension AddNewStudentViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -116,5 +131,40 @@ extension AddNewStudentViewController: UITableViewDelegate, UITableViewDataSourc
         
         cell.goalLabel.text = "Student will produce /sh/ with 100% accuracy."
         return cell
+    }
+}
+
+extension AddNewStudentViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if enterGradeTextField.isFirstResponder {
+            return grades.count
+        } else if enterDisorderTextField.isFirstResponder {
+            return disorders.count
+        } else {
+            return 0
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+         if enterGradeTextField.isFirstResponder {
+                   return grades[row]
+               } else if enterDisorderTextField.isFirstResponder {
+                   return disorders[row]
+               }
+        return nil
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if enterGradeTextField.isFirstResponder {
+            enterGradeTextField.text = grades[row]
+            enterAgeTextField.becomeFirstResponder()
+        } else if enterDisorderTextField.isFirstResponder {
+            enterDisorderTextField.text = disorders[row]
+            enterDisorderTextField.resignFirstResponder()
+        }
     }
 }
