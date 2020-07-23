@@ -32,6 +32,7 @@
 		BA82754724C61E8B0083EDA1 /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82754624C61E8B0083EDA1 /* GoalTableViewCell.swift */; };
 		BA82758B24C9D6700083EDA1 /* SelectCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82758A24C9D6700083EDA1 /* SelectCategoryViewController.swift */; };
 		BA82758D24C9D6880083EDA1 /* SelectGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82758C24C9D6880083EDA1 /* SelectGoalViewController.swift */; };
+		BA82758F24CA01EC0083EDA1 /* GoalArrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82758E24CA01EC0083EDA1 /* GoalArrays.swift */; };
 		BA8D3AF324C1F9AA009C0389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF224C1F9AA009C0389 /* AppDelegate.swift */; };
 		BA8D3AF524C1F9AA009C0389 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF424C1F9AA009C0389 /* SceneDelegate.swift */; };
 		BA8D3AF724C1F9AA009C0389 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF624C1F9AA009C0389 /* SplashViewController.swift */; };
@@ -69,6 +70,7 @@
 		BA82754624C61E8B0083EDA1 /* GoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
 		BA82758A24C9D6700083EDA1 /* SelectCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryViewController.swift; sourceTree = "<group>"; };
 		BA82758C24C9D6880083EDA1 /* SelectGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGoalViewController.swift; sourceTree = "<group>"; };
+		BA82758E24CA01EC0083EDA1 /* GoalArrays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalArrays.swift; sourceTree = "<group>"; };
 		BA8D3AEF24C1F9AA009C0389 /* CaseloadManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaseloadManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8D3AF224C1F9AA009C0389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA8D3AF424C1F9AA009C0389 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				BA82752124C5D94A0083EDA1 /* DataModel.swift */,
+				BA82758E24CA01EC0083EDA1 /* GoalArrays.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				BA82751A24C258F10083EDA1 /* GroupsViewController.swift in Sources */,
 				BA82752024C4A6B70083EDA1 /* GroupsTableViewCell.swift in Sources */,
 				BA82758D24C9D6880083EDA1 /* SelectGoalViewController.swift in Sources */,
+				BA82758F24CA01EC0083EDA1 /* GoalArrays.swift in Sources */,
 				BA8D3B0D24C1FF44009C0389 /* LoginViewController.swift in Sources */,
 				BA82758B24C9D6700083EDA1 /* SelectCategoryViewController.swift in Sources */,
 				BA8D3B0F24C1FF7C009C0389 /* AgeGroupViewController.swift in Sources */,

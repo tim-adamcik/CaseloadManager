@@ -13,7 +13,7 @@ class SelectCategoryViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let categories = ["Custom", "Articulation/Phonology", "Receptive Language", "Expressive Language", "Hearing", "AAC", "Pragmatics", "Dysphagia", "Fluency", "Voice", "Cognition"]
+    let categories = ["Custom", "Articulation", "Phonology", "Receptive Language", "Expressive Language", "Hearing", "AAC", "Pragmatics", "Dysphagia", "Fluency", "Voice", "Cognition"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,14 @@ extension SelectCategoryViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 55
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(identifier: "SelectGoalViewController") as! SelectGoalViewController
+        vc.modalPresentationStyle = .fullScreen
+        vc.selectedCategory = tableView.cellForRow(at: indexPath)?.textLabel?.text
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     
