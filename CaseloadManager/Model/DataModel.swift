@@ -46,3 +46,7 @@ struct GoalData {
     var percentage: Double
 }
 
+struct CustomGoals {
+    var goal: String
+}
+

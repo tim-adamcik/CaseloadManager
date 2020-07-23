@@ -26,21 +26,28 @@ class AddNewStudentViewController: UIViewController {
     let disorders = ["Speech", "Language", "Speech and Language", "Cognitive Impairment", "Dysphagia"]
     let grades = ["Early Childhood", "Pre-K", "K", "1","2","3","4","5","6","7","8","9","10","11","12","Adult"]
     var pickerView = UIPickerView()
+    let datePicker = UIDatePicker()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    fileprivate func createTextFieldAndPickerDelegates() {
         firstNameTextField.delegate = self
         lastNameTextField.delegate = self
         enterAgeTextField.delegate = self
         enterCaseManagerTextField.delegate = self
-        enterEndDateTextField.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
         pickerView.delegate = self
         pickerView.dataSource = self
         firstNameTextField.becomeFirstResponder()
-        enterDisorderTextField.inputView = pickerView
-        enterGradeTextField.inputView = pickerView
+        createDatePicker()
+        createPickerView()
+        dismissPickerView()
+        
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        createTextFieldAndPickerDelegates()
         
         NotificationCenter.default.addObserver(self, selector: #selector(AddNewStudentViewController.keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(AddNewStudentViewController.keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -56,27 +63,6 @@ class AddNewStudentViewController: UIViewController {
         let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize.height , right: 0.0)
         scrollView.contentInset = contentInsets
         scrollView.scrollIndicatorInsets = contentInsets
-        
-        // Just Move view up length of keyboard when the textField is hidden
-        
-//        var shouldMoveViewUp = false
-//
-//        // if active text field is not nil
-//        if let activeTextField = activeTextField {
-//
-//            let bottomOfTextField = activeTextField.convert(activeTextField.bounds, to: self.view).maxY;
-//
-//            let topOfKeyboard = self.view.frame.height - keyboardSize.height
-//
-//            // if the bottom of Textfield is below the top of keyboard, move up
-//            if bottomOfTextField > topOfKeyboard {
-//                shouldMoveViewUp = true
-//            }
-//        }
-//
-//        if (shouldMoveViewUp) {
-//            self.view.frame.origin.y = 0 - keyboardSize.height
-//        }
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
@@ -90,6 +76,42 @@ class AddNewStudentViewController: UIViewController {
            scrollView.scrollIndicatorInsets = contentInsets
     }
     
+    func createDatePicker() {
+        //toolbar
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([doneBtn], animated: true)
+        //assigntoolbar
+        enterEndDateTextField.inputAccessoryView = toolbar
+        
+        //assign datepicker to textfield
+        enterEndDateTextField.inputView = datePicker
+        
+        //datepicker mode
+        datePicker.datePickerMode = .date
+        
+    }
+    @objc func donePressed() {
+        //create a date formatter
+        let formatter = DateFormatter()
+        formatter.timeStyle = .none
+        formatter.dateStyle = .short
+        
+        enterEndDateTextField.text = formatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+        enterDisorderTextField.becomeFirstResponder()
+    }
+    
+
+    
+    @IBAction func addGoalBtnPressed(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(identifier: "SelectCategoryViewController") as! SelectCategoryViewController
+        vc.modalPresentationStyle = .fullScreen
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension AddNewStudentViewController: UITextFieldDelegate {
@@ -161,10 +183,37 @@ extension AddNewStudentViewController: UIPickerViewDelegate, UIPickerViewDataSou
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if enterGradeTextField.isFirstResponder {
             enterGradeTextField.text = grades[row]
-            enterAgeTextField.becomeFirstResponder()
         } else if enterDisorderTextField.isFirstResponder {
             enterDisorderTextField.text = disorders[row]
-            enterDisorderTextField.resignFirstResponder()
+        }
+    }
+    
+    func createPickerView() {
+        let pickerView = UIPickerView()
+        pickerView.delegate = self
+        enterGradeTextField.inputView = pickerView
+        enterDisorderTextField.inputView = pickerView
+    }
+    
+    func dismissPickerView() {
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let button = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.action))
+        toolBar.setItems([button], animated: true)
+        toolBar.isUserInteractionEnabled = true
+        enterGradeTextField.inputAccessoryView = toolBar
+        enterDisorderTextField.inputAccessoryView = toolBar
+    }
+    
+    @objc func action() {
+       view.endEditing(true)
+        
+        if let gradeText = enterGradeTextField.text,
+            let disorderText = enterDisorderTextField.text {
+            if !gradeText.isEmpty && disorderText.isEmpty {
+            enterAgeTextField.becomeFirstResponder()
+            }
         }
     }
 }
