@@ -107,7 +107,8 @@ class AddNewStudentViewController: UIViewController {
 
     
     @IBAction func addGoalBtnPressed(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(identifier: "SelectCategoryViewController") as! SelectCategoryViewController
+//        let vc = storyboard?.instantiateViewController(identifier: "SelectCategoryViewController") as! SelectCategoryViewController
+        let vc = storyboard?.instantiateViewController(identifier: "CategorySelectViewController") as! CategorySelectViewController
         vc.modalPresentationStyle = .fullScreen
         
         navigationController?.pushViewController(vc, animated: true)

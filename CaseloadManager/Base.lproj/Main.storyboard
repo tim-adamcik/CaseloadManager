@@ -7,6 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Nunito-Bold.ttf">
+            <string>Nunito-Bold</string>
+        </array>
         <array key="Nunito-ExtraBold.ttf">
             <string>Nunito-ExtraBold</string>
         </array>
@@ -389,6 +392,84 @@
             </objects>
             <point key="canvasLocation" x="6548" y="-236"/>
         </scene>
+        <!--Category Select View Controller-->
+        <scene sceneID="pGV-xd-Cll">
+            <objects>
+                <viewController storyboardIdentifier="CategorySelectViewController" id="yLH-8I-J90" customClass="CategorySelectViewController" customModule="CaseloadManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nl0-3i-yLT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Client will... " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngS-1t-MRJ">
+                                <rect key="frame" x="16" y="44" width="382" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Xjg-MW-ybz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="17"/>
+                                <color key="textColor" red="0.1216280133315069" green="0.12058540239726027" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zpa-4j-bWm">
+                                <rect key="frame" x="16" y="77" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vh2-kG-qfw">
+                                <rect key="frame" x="0.0" y="111" width="414" height="751"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategorySelectCell" textLabel="b9S-DI-HJa" style="IBUITableViewCellStyleDefault" id="dKQ-lN-DoK" customClass="CategorySelectCell" customModule="CaseloadManager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="47.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dKQ-lN-DoK" id="A1M-yv-Ras">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="47.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b9S-DI-HJa">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="47.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="b9S-DI-HJa" id="iqC-OH-79Y"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="yLH-8I-J90" id="4uB-3j-u6x"/>
+                                    <outlet property="delegate" destination="yLH-8I-J90" id="8JE-Gi-6zV"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Vh2-kG-qfw" firstAttribute="top" secondItem="Zpa-4j-bWm" secondAttribute="bottom" id="Ckv-Ox-QL6"/>
+                            <constraint firstItem="Zpa-4j-bWm" firstAttribute="leading" secondItem="yGD-Kw-zFc" secondAttribute="leading" constant="16" id="Dye-cb-Btu"/>
+                            <constraint firstItem="Vh2-kG-qfw" firstAttribute="leading" secondItem="yGD-Kw-zFc" secondAttribute="leading" id="RDm-jm-azR"/>
+                            <constraint firstItem="yGD-Kw-zFc" firstAttribute="trailing" secondItem="Zpa-4j-bWm" secondAttribute="trailing" constant="16" id="T5m-XR-pTw"/>
+                            <constraint firstItem="yGD-Kw-zFc" firstAttribute="bottom" secondItem="Vh2-kG-qfw" secondAttribute="bottom" id="aIr-ky-Vwi"/>
+                            <constraint firstItem="yGD-Kw-zFc" firstAttribute="trailing" secondItem="ngS-1t-MRJ" secondAttribute="trailing" constant="16" id="c0j-GY-JE6"/>
+                            <constraint firstItem="Zpa-4j-bWm" firstAttribute="top" secondItem="ngS-1t-MRJ" secondAttribute="bottom" constant="8" id="kSd-Gr-dPm"/>
+                            <constraint firstItem="yGD-Kw-zFc" firstAttribute="trailing" secondItem="Vh2-kG-qfw" secondAttribute="trailing" id="luI-Wo-P5n"/>
+                            <constraint firstItem="ngS-1t-MRJ" firstAttribute="leading" secondItem="yGD-Kw-zFc" secondAttribute="leading" constant="16" id="pdh-bd-fzV"/>
+                            <constraint firstItem="ngS-1t-MRJ" firstAttribute="top" secondItem="yGD-Kw-zFc" secondAttribute="top" id="rTs-5k-Eec"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yGD-Kw-zFc"/>
+                    </view>
+                    <connections>
+                        <outlet property="clientWillLabel" destination="ngS-1t-MRJ" id="M5E-MH-Fi1"/>
+                        <outlet property="selectCategoryPicker" destination="Zpa-4j-bWm" id="zcQ-uG-OXj"/>
+                        <outlet property="tableView" destination="Vh2-kG-qfw" id="Axw-EI-DII"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AFB-e2-uX4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7661" y="-424"/>
+        </scene>
         <!--Select Category View Controller-->
         <scene sceneID="sVm-Ii-rVd">
             <objects>
@@ -454,14 +535,14 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="V9b-RX-AqS" style="IBUITableViewCellStyleDefault" id="HNt-kw-kVE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SelectGoalTableCell" textLabel="ueU-cr-0aN" style="IBUITableViewCellStyleDefault" id="HNt-kw-kVE" customClass="SelectGoalTableCell" customModule="CaseloadManager" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HNt-kw-kVE" id="NmA-U0-SRt">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="V9b-RX-AqS">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ueU-cr-0aN">
                                                     <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -470,6 +551,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="ueU-cr-0aN" id="f6m-lV-m3Z"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

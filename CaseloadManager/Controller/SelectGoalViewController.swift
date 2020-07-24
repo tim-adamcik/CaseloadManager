@@ -66,13 +66,10 @@ class SelectGoalViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = UITableViewCell()
-            cell.textLabel?.text = currentArray[indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SelectGoalTableCell") as! SelectGoalTableCell
+            cell.label.text = currentArray[indexPath.row]
             
             return cell
         }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
 }
