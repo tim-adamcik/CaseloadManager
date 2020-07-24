@@ -34,10 +34,10 @@ class CaseloadViewController: UIViewController {
     }
     
     @objc func addStudent(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(identifier: "AddNewStudentViewController") as! AddNewStudentViewController
-        vc.modalPresentationStyle = .fullScreen
+        let nc = storyboard?.instantiateViewController(identifier: "NewStudentNC") as! UINavigationController
+        nc.modalPresentationStyle = .fullScreen
         
-        navigationController?.pushViewController(vc, animated: true)
+        present(nc, animated: true)
     }
     
     @objc func goBackToAgeGroupSelection(_ sender: Any) {

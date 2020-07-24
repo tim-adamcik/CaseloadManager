@@ -12,7 +12,7 @@ import UIKit
 class CategorySelectViewController: UIViewController {
     
     @IBOutlet weak var clientWillLabel: UILabel!
-    @IBOutlet weak var selectCategoryPicker: UITextField!
+    @IBOutlet weak var selectCategoryTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
     let categories = ["Custom", "Articulation", "Phonology", "Receptive Language", "Expressive Language", "Hearing", "AAC", "Pragmatics", "Dysphagia", "Fluency", "Voice", "Cognition"]
@@ -21,6 +21,7 @@ class CategorySelectViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        selectCategoryTextField.textAlignment = .center
         tableView.delegate = self
         tableView.dataSource = self
         createPickerView()
@@ -64,13 +65,13 @@ extension CategorySelectViewController: UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectCategoryPicker.text = categories[row]
+        selectCategoryTextField.text = categories[row]
     }
     
     func createPickerView() {
         let pickerView = UIPickerView()
         pickerView.delegate = self
-        selectCategoryPicker.inputView = pickerView
+        selectCategoryTextField.inputView = pickerView
         
     }
     
@@ -81,11 +82,11 @@ extension CategorySelectViewController: UIPickerViewDelegate, UIPickerViewDataSo
         let button = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.action))
         toolBar.setItems([button], animated: true)
         toolBar.isUserInteractionEnabled = true
-        selectCategoryPicker.inputAccessoryView = toolBar
+        selectCategoryTextField.inputAccessoryView = toolBar
     }
     
     @objc func action() {
-        currentCategory = selectCategoryPicker.text
+        currentCategory = selectCategoryTextField.text
         currentArray = getCurrentArray(category: currentCategory!)
        view.endEditing(true)
         tableView.reloadData()

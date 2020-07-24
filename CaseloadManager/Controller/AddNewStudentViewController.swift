@@ -28,6 +28,11 @@ class AddNewStudentViewController: UIViewController {
     var pickerView = UIPickerView()
     let datePicker = UIDatePicker()
     
+    lazy var cancelBtn: UIBarButtonItem = {
+        let barBtnItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelBtnPressed(_:)))
+        return barBtnItem
+    }()
+    
     fileprivate func createTextFieldAndPickerDelegates() {
         firstNameTextField.delegate = self
         lastNameTextField.delegate = self
@@ -47,6 +52,7 @@ class AddNewStudentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.leftBarButtonItem = cancelBtn
         createTextFieldAndPickerDelegates()
         
         NotificationCenter.default.addObserver(self, selector: #selector(AddNewStudentViewController.keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -112,6 +118,10 @@ class AddNewStudentViewController: UIViewController {
         vc.modalPresentationStyle = .fullScreen
         
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func cancelBtnPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 }
 
