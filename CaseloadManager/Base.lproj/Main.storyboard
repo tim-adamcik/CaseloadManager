@@ -479,24 +479,412 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDR-MF-XLd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDR-MF-XLd">
                                 <rect key="frame" x="16" y="44" width="382" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Nxh-Kr-yUo"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                <color key="textColor" red="0.1216280133" green="0.1205854024" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QwQ-eP-Lka">
+                                <rect key="frame" x="16" y="96" width="382" height="1"/>
+                                <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="P8d-YC-Oxz"/>
+                                    <constraint firstAttribute="height" constant="1" id="sEY-ka-ZN1"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT CUE LEVEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efl-Es-A3F">
+                                <rect key="frame" x="16" y="109" width="382" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                <color key="textColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="R2y-GU-hOw">
+                                <rect key="frame" x="16" y="140.5" width="382" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="VQK-TJ-Wbi">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTb-eD-hGP">
+                                                <rect key="frame" x="0.0" y="0.0" width="170.5" height="44"/>
+                                                <color key="backgroundColor" white="0.89635059930000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Independently">
+                                                    <color key="titleColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <state key="selected" title="Independently">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cueLevelSelected:" destination="GRQ-xp-4js" eventType="touchUpInside" id="CjQ-AK-umv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9G-w0-K4a">
+                                                <rect key="frame" x="211.5" y="0.0" width="170.5" height="44"/>
+                                                <color key="backgroundColor" white="0.89635059930000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Gradually Fading">
+                                                    <color key="titleColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cueLevelSelected:" destination="GRQ-xp-4js" eventType="touchUpInside" id="RHg-LW-cwR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="OLm-Tu-Noh"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="q1l-5f-Ks1">
+                                        <rect key="frame" x="0.0" y="56" width="382" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cM-u3-zWH">
+                                                <rect key="frame" x="0.0" y="0.0" width="102" height="44"/>
+                                                <color key="backgroundColor" white="0.89635059930000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                <color key="tintColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Minimal">
+                                                    <color key="titleColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cueLevelSelected:" destination="GRQ-xp-4js" eventType="touchUpInside" id="bLV-Qg-3eH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAy-ks-ENN">
+                                                <rect key="frame" x="140" y="0.0" width="102" height="44"/>
+                                                <color key="backgroundColor" white="0.89635059930000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                <color key="tintColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Moderate">
+                                                    <color key="titleColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cueLevelSelected:" destination="GRQ-xp-4js" eventType="touchUpInside" id="m8I-PD-iDf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3v-Xo-Mfj">
+                                                <rect key="frame" x="280" y="0.0" width="102" height="44"/>
+                                                <color key="backgroundColor" white="0.89635059930000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                <color key="tintColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Maximum">
+                                                    <color key="titleColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cueLevelSelected:" destination="GRQ-xp-4js" eventType="touchUpInside" id="b6U-sA-5zb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Iaq-Fc-CTo"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4G-Fi-TRX">
+                                <rect key="frame" x="16" y="252.5" width="382" height="1"/>
+                                <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="Ygh-cF-Znv"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="1" id="gzf-tM-sM2"/>
+                                    <constraint firstAttribute="height" constant="1" id="tDg-Gq-fuG"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT CUE TYPE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqF-Ql-xkD">
+                                <rect key="frame" x="16" y="265.5" width="382" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                <color key="textColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Gf7-dU-8ze">
+                                <rect key="frame" x="16" y="297" width="382" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="r0k-wk-BUz">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4e-vL-ePl">
+                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="44"/>
+                                                <color key="backgroundColor" white="0.89635059930000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                <state key="normal" title="Verbal">
+                                                    <color key="titleColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cueTypeSelected:" destination="GRQ-xp-4js" eventType="touchUpInside" id="SgJ-pR-X0o"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1u-1P-dkR">
+                                                <rect key="frame" x="140.5" y="0.0" width="101" height="44"/>
+                                                <color key="backgroundColor" white="0.89635059930000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                <state key="normal" title="Visual">
+                                                    <color key="titleColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cueTypeSelected:" destination="GRQ-xp-4js" eventType="touchUpInside" id="BlC-VA-j24"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mv6-ZQ-yrL">
+                                                <rect key="frame" x="280.5" y="0.0" width="101.5" height="44"/>
+                                                <color key="backgroundColor" white="0.89635059930000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                <state key="normal" title="Tactile">
+                                                    <color key="titleColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cueTypeSelected:" destination="GRQ-xp-4js" eventType="touchUpInside" id="8za-br-Fv3"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="MO2-1y-JtK"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="bTo-tS-mdt">
+                                        <rect key="frame" x="0.0" y="56" width="382" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98r-Je-rvr">
+                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="44"/>
+                                                <color key="backgroundColor" white="0.89635059930000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                <state key="normal" title="Multi-Modal">
+                                                    <color key="titleColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cueTypeSelected:" destination="GRQ-xp-4js" eventType="touchUpInside" id="ybf-B6-cYw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHk-yR-6qU">
+                                                <rect key="frame" x="140.5" y="0.0" width="101" height="44"/>
+                                                <color key="backgroundColor" white="0.89635059930000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                <state key="normal" title="Articulatory">
+                                                    <color key="titleColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cueTypeSelected:" destination="GRQ-xp-4js" eventType="touchUpInside" id="OEO-JK-eVB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRO-Fv-2au">
+                                                <rect key="frame" x="280.5" y="0.0" width="101.5" height="44"/>
+                                                <color key="backgroundColor" white="0.89635059930000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                <state key="normal" title="Phonemic">
+                                                    <color key="titleColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cueTypeSelected:" destination="GRQ-xp-4js" eventType="touchUpInside" id="bnS-iQ-AB6"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="4fs-MN-pZE"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0a-z6-zSc">
+                                <rect key="frame" x="16" y="409" width="382" height="1"/>
+                                <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="1Wm-5r-gzQ"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT ACCURACY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Jo-K3-LmO">
+                                <rect key="frame" x="16" y="422" width="382" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                <color key="textColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="4a7-NE-RLM">
+                                <rect key="frame" x="16" y="453.5" width="382" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="BJ3-LL-f7m">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REp-lW-0kb">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="44"/>
+                                                <color key="backgroundColor" white="0.89635059930000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                <state key="normal" title="70%">
+                                                    <color key="titleColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="accuracySelected:" destination="GRQ-xp-4js" eventType="touchUpInside" id="nKo-YX-cyR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdL-n7-oMd">
+                                                <rect key="frame" x="141" y="0.0" width="100" height="44"/>
+                                                <color key="backgroundColor" white="0.89635059930000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                <state key="normal" title="75%">
+                                                    <color key="titleColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPo-Nf-Sxj">
+                                                <rect key="frame" x="282" y="0.0" width="100" height="44"/>
+                                                <color key="backgroundColor" white="0.89635059930000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                <state key="normal" title="80%">
+                                                    <color key="titleColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="niC-yM-aYv"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="OlK-dv-udC">
+                                        <rect key="frame" x="0.0" y="56" width="382" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfD-Au-Sb1">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="44"/>
+                                                <color key="backgroundColor" white="0.89635059930000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                <state key="normal" title="85%">
+                                                    <color key="titleColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnA-mC-iiA">
+                                                <rect key="frame" x="141" y="0.0" width="100" height="44"/>
+                                                <color key="backgroundColor" white="0.89635059930000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                <state key="normal" title="90%">
+                                                    <color key="titleColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OoQ-Nm-Awr">
+                                                <rect key="frame" x="282" y="0.0" width="100" height="44"/>
+                                                <color key="backgroundColor" white="0.89635059930000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                                <state key="normal" title="95%">
+                                                    <color key="titleColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="SrI-Ko-GPc"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="p4C-lv-wPo"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXg-CZ-PBc">
+                                <rect key="frame" x="157" y="561.5" width="100" height="44"/>
+                                <color key="backgroundColor" white="0.89635059930000005" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8Gr-pT-ehn"/>
+                                    <constraint firstAttribute="width" constant="100" id="zAz-lp-4H3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="17"/>
+                                <state key="normal" title="100%">
+                                    <color key="titleColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vto-Mh-vWo">
+                                <rect key="frame" x="16" y="617.5" width="382" height="1"/>
+                                <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="0eW-y3-hjB"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GlM-IR-NDQ">
+                                <rect key="frame" x="67" y="747" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.21176470589999999" green="0.27058823529999998" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="27r-X9-Yvi"/>
+                                    <constraint firstAttribute="width" constant="280" id="dtf-v0-FBW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="20"/>
+                                <state key="normal" title="Save Goal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveGoalPressed:" destination="GRQ-xp-4js" eventType="touchUpInside" id="0z5-OW-sIt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Efl-Es-A3F" firstAttribute="top" secondItem="QwQ-eP-Lka" secondAttribute="bottom" constant="12" id="0NK-ia-LXo"/>
+                            <constraint firstItem="SUV-Ve-Mkp" firstAttribute="trailing" secondItem="R2y-GU-hOw" secondAttribute="trailing" constant="16" id="3ds-n2-GTY"/>
+                            <constraint firstItem="e4G-Fi-TRX" firstAttribute="top" secondItem="R2y-GU-hOw" secondAttribute="bottom" constant="12" id="3ee-qp-eBB"/>
+                            <constraint firstItem="vto-Mh-vWo" firstAttribute="leading" secondItem="fEZ-7P-Gpx" secondAttribute="leading" constant="16" id="3j7-zt-aGk"/>
+                            <constraint firstAttribute="trailing" secondItem="QwQ-eP-Lka" secondAttribute="trailing" constant="16" id="4VD-n8-K6B"/>
+                            <constraint firstItem="Gf7-dU-8ze" firstAttribute="leading" secondItem="SUV-Ve-Mkp" secondAttribute="leading" constant="16" id="9He-bz-jHQ"/>
+                            <constraint firstItem="7Jo-K3-LmO" firstAttribute="top" secondItem="c0a-z6-zSc" secondAttribute="bottom" constant="12" id="9V0-gu-arW"/>
+                            <constraint firstItem="4a7-NE-RLM" firstAttribute="top" secondItem="7Jo-K3-LmO" secondAttribute="bottom" constant="8" id="AI1-1j-Z6G"/>
+                            <constraint firstItem="c0a-z6-zSc" firstAttribute="leading" secondItem="fEZ-7P-Gpx" secondAttribute="leading" constant="16" id="AR1-De-xme"/>
+                            <constraint firstAttribute="trailing" secondItem="e4G-Fi-TRX" secondAttribute="trailing" constant="16" id="AgE-wd-kUc"/>
+                            <constraint firstItem="SUV-Ve-Mkp" firstAttribute="trailing" secondItem="4a7-NE-RLM" secondAttribute="trailing" constant="16" id="ApS-Nk-6B7"/>
+                            <constraint firstAttribute="trailing" secondItem="c0a-z6-zSc" secondAttribute="trailing" constant="16" id="EG3-FV-VEr"/>
                             <constraint firstItem="hDR-MF-XLd" firstAttribute="top" secondItem="SUV-Ve-Mkp" secondAttribute="top" id="GQw-Mw-jBP"/>
+                            <constraint firstItem="SUV-Ve-Mkp" firstAttribute="bottom" secondItem="GlM-IR-NDQ" secondAttribute="bottom" constant="65" id="I3L-0b-uX5"/>
+                            <constraint firstItem="SUV-Ve-Mkp" firstAttribute="trailing" secondItem="Efl-Es-A3F" secondAttribute="trailing" constant="16" id="Nla-Gm-9EI"/>
+                            <constraint firstItem="7Jo-K3-LmO" firstAttribute="leading" secondItem="SUV-Ve-Mkp" secondAttribute="leading" constant="16" id="OUU-KM-016"/>
+                            <constraint firstAttribute="trailing" secondItem="vto-Mh-vWo" secondAttribute="trailing" constant="16" id="PTe-pc-TeU"/>
+                            <constraint firstItem="TXg-CZ-PBc" firstAttribute="centerX" secondItem="OlK-dv-udC" secondAttribute="centerX" id="QXn-hE-rEt"/>
+                            <constraint firstItem="vto-Mh-vWo" firstAttribute="top" secondItem="TXg-CZ-PBc" secondAttribute="bottom" constant="12" id="Rtp-Vy-j2L"/>
+                            <constraint firstItem="4a7-NE-RLM" firstAttribute="leading" secondItem="SUV-Ve-Mkp" secondAttribute="leading" constant="16" id="TLH-c5-geh"/>
+                            <constraint firstItem="e4G-Fi-TRX" firstAttribute="leading" secondItem="fEZ-7P-Gpx" secondAttribute="leading" constant="16" id="U5o-hw-3wp"/>
+                            <constraint firstItem="SUV-Ve-Mkp" firstAttribute="trailing" secondItem="Gf7-dU-8ze" secondAttribute="trailing" constant="16" id="UDv-tc-Vxv"/>
+                            <constraint firstItem="R2y-GU-hOw" firstAttribute="leading" secondItem="SUV-Ve-Mkp" secondAttribute="leading" constant="16" id="UNd-Lb-39Y"/>
+                            <constraint firstItem="GlM-IR-NDQ" firstAttribute="centerX" secondItem="fEZ-7P-Gpx" secondAttribute="centerX" id="WaI-iG-lSh"/>
+                            <constraint firstItem="uqF-Ql-xkD" firstAttribute="leading" secondItem="SUV-Ve-Mkp" secondAttribute="leading" constant="16" id="Ww0-ST-zkT"/>
+                            <constraint firstItem="c0a-z6-zSc" firstAttribute="top" secondItem="Gf7-dU-8ze" secondAttribute="bottom" constant="12" id="YsL-oh-QVa"/>
                             <constraint firstItem="hDR-MF-XLd" firstAttribute="leading" secondItem="SUV-Ve-Mkp" secondAttribute="leading" constant="16" id="bjt-f0-4e4"/>
+                            <constraint firstItem="uqF-Ql-xkD" firstAttribute="top" secondItem="e4G-Fi-TRX" secondAttribute="bottom" constant="12" id="dWr-4K-REB"/>
+                            <constraint firstItem="SUV-Ve-Mkp" firstAttribute="trailing" secondItem="uqF-Ql-xkD" secondAttribute="trailing" constant="16" id="fXx-hC-eq5"/>
+                            <constraint firstItem="Efl-Es-A3F" firstAttribute="leading" secondItem="SUV-Ve-Mkp" secondAttribute="leading" constant="16" id="igh-zf-uEp"/>
+                            <constraint firstItem="Gf7-dU-8ze" firstAttribute="top" secondItem="uqF-Ql-xkD" secondAttribute="bottom" constant="8" id="pmN-3v-mq8"/>
+                            <constraint firstItem="QwQ-eP-Lka" firstAttribute="leading" secondItem="fEZ-7P-Gpx" secondAttribute="leading" constant="16" id="sJJ-Lc-mGg"/>
+                            <constraint firstItem="SUV-Ve-Mkp" firstAttribute="trailing" secondItem="7Jo-K3-LmO" secondAttribute="trailing" constant="16" id="uOX-aW-SPe"/>
+                            <constraint firstItem="R2y-GU-hOw" firstAttribute="top" secondItem="Efl-Es-A3F" secondAttribute="bottom" constant="8" id="vVg-BA-A2d"/>
+                            <constraint firstItem="TXg-CZ-PBc" firstAttribute="top" secondItem="4a7-NE-RLM" secondAttribute="bottom" constant="8" id="waF-pT-Dip"/>
+                            <constraint firstItem="QwQ-eP-Lka" firstAttribute="top" secondItem="hDR-MF-XLd" secondAttribute="bottom" constant="12" id="xFO-ia-7jt"/>
                             <constraint firstItem="SUV-Ve-Mkp" firstAttribute="trailing" secondItem="hDR-MF-XLd" secondAttribute="trailing" constant="16" id="yZl-La-cgT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SUV-Ve-Mkp"/>
                     </view>
+                    <connections>
+                        <outlet property="goalLabel" destination="hDR-MF-XLd" id="bOz-n3-LnH"/>
+                        <outlet property="saveBtn" destination="GlM-IR-NDQ" id="3fu-Oy-0Cl"/>
+                        <outletCollection property="cueLevelBtns" destination="QTb-eD-hGP" collectionClass="NSMutableArray" id="XH6-2W-Qlu"/>
+                        <outletCollection property="cueLevelBtns" destination="g9G-w0-K4a" collectionClass="NSMutableArray" id="Th0-2R-WoM"/>
+                        <outletCollection property="cueLevelBtns" destination="2cM-u3-zWH" collectionClass="NSMutableArray" id="TSw-Gj-TAT"/>
+                        <outletCollection property="cueLevelBtns" destination="qAy-ks-ENN" collectionClass="NSMutableArray" id="Abu-aY-PrZ"/>
+                        <outletCollection property="cueLevelBtns" destination="p3v-Xo-Mfj" collectionClass="NSMutableArray" id="KKa-bu-g0w"/>
+                        <outletCollection property="cueTypeBtns" destination="P4e-vL-ePl" collectionClass="NSMutableArray" id="bua-qG-vFe"/>
+                        <outletCollection property="cueTypeBtns" destination="X1u-1P-dkR" collectionClass="NSMutableArray" id="Z8Q-3z-B6C"/>
+                        <outletCollection property="cueTypeBtns" destination="Mv6-ZQ-yrL" collectionClass="NSMutableArray" id="qHj-fW-ykD"/>
+                        <outletCollection property="cueTypeBtns" destination="98r-Je-rvr" collectionClass="NSMutableArray" id="XNH-6Q-RLd"/>
+                        <outletCollection property="cueTypeBtns" destination="EHk-yR-6qU" collectionClass="NSMutableArray" id="XbQ-9l-HWj"/>
+                        <outletCollection property="cueTypeBtns" destination="nRO-Fv-2au" collectionClass="NSMutableArray" id="4om-uJ-vjG"/>
+                        <outletCollection property="accuracyBtns" destination="REp-lW-0kb" collectionClass="NSMutableArray" id="q0z-pK-q5V"/>
+                        <outletCollection property="accuracyBtns" destination="LdL-n7-oMd" collectionClass="NSMutableArray" id="oI1-z5-7ua"/>
+                        <outletCollection property="accuracyBtns" destination="yPo-Nf-Sxj" collectionClass="NSMutableArray" id="aej-Up-s6X"/>
+                        <outletCollection property="accuracyBtns" destination="PfD-Au-Sb1" collectionClass="NSMutableArray" id="Fmq-df-Tk6"/>
+                        <outletCollection property="accuracyBtns" destination="xnA-mC-iiA" collectionClass="NSMutableArray" id="Wox-qo-VtY"/>
+                        <outletCollection property="accuracyBtns" destination="OoQ-Nm-Awr" collectionClass="NSMutableArray" id="eSV-p0-IbD"/>
+                        <outletCollection property="accuracyBtns" destination="TXg-CZ-PBc" collectionClass="NSMutableArray" id="Eb8-Mv-2wi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXY-GL-BX3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -515,14 +903,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="CGZ-Z3-BZz" style="IBUITableViewCellStyleDefault" id="dJL-XA-4do">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dJL-XA-4do" id="1Z6-oe-HDa">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CGZ-Z3-BZz">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="60.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="22"/>
                                                     <color key="textColor" red="0.14476984288630135" green="0.46627530721780813" blue="0.9374794352986302" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

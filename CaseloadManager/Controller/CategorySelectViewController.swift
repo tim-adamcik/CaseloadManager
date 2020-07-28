@@ -45,6 +45,16 @@ extension CategorySelectViewController: UITableViewDelegate, UITableViewDataSour
             }
         return cell
         }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "CuesAndAccuracyViewController") as! CuesAndAccuracyViewController
+        vc.modalPresentationStyle = .fullScreen
+        let cell = tableView.cellForRow(at: indexPath)
+        if let goal = cell?.textLabel?.text {
+            vc.goalString = goal
+        }
+        navigationController?.pushViewController(vc, animated: true)
+    }
         
     }
     
