@@ -38,6 +38,9 @@
 		BA82759524CB4FC00083EDA1 /* CategorySelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82759424CB4FC00083EDA1 /* CategorySelectCell.swift */; };
 		BA82759724CB7E910083EDA1 /* CuesAndAccuracyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82759624CB7E910083EDA1 /* CuesAndAccuracyViewController.swift */; };
 		BA8275AF24D0D80A0083EDA1 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275AE24D0D80A0083EDA1 /* CustomButton.swift */; };
+		BA8275B424D326F10083EDA1 /* CueLevelEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275B324D326F10083EDA1 /* CueLevelEnum.swift */; };
+		BA8275B624D327520083EDA1 /* CueTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275B524D327520083EDA1 /* CueTypes.swift */; };
+		BA8275B824D327980083EDA1 /* AccuracyLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275B724D327980083EDA1 /* AccuracyLevels.swift */; };
 		BA8D3AF324C1F9AA009C0389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF224C1F9AA009C0389 /* AppDelegate.swift */; };
 		BA8D3AF524C1F9AA009C0389 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF424C1F9AA009C0389 /* SceneDelegate.swift */; };
 		BA8D3AF724C1F9AA009C0389 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF624C1F9AA009C0389 /* SplashViewController.swift */; };
@@ -81,6 +84,9 @@
 		BA82759424CB4FC00083EDA1 /* CategorySelectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectCell.swift; sourceTree = "<group>"; };
 		BA82759624CB7E910083EDA1 /* CuesAndAccuracyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuesAndAccuracyViewController.swift; sourceTree = "<group>"; };
 		BA8275AE24D0D80A0083EDA1 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		BA8275B324D326F10083EDA1 /* CueLevelEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueLevelEnum.swift; sourceTree = "<group>"; };
+		BA8275B524D327520083EDA1 /* CueTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueTypes.swift; sourceTree = "<group>"; };
+		BA8275B724D327980083EDA1 /* AccuracyLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccuracyLevels.swift; sourceTree = "<group>"; };
 		BA8D3AEF24C1F9AA009C0389 /* CaseloadManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaseloadManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8D3AF224C1F9AA009C0389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA8D3AF424C1F9AA009C0389 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +133,30 @@
 			path = Nunito;
 			sourceTree = "<group>";
 		};
+		BA8275B024D326CC0083EDA1 /* CueLevels */ = {
+			isa = PBXGroup;
+			children = (
+				BA8275B324D326F10083EDA1 /* CueLevelEnum.swift */,
+			);
+			path = CueLevels;
+			sourceTree = "<group>";
+		};
+		BA8275B124D326DA0083EDA1 /* CueTypes */ = {
+			isa = PBXGroup;
+			children = (
+				BA8275B524D327520083EDA1 /* CueTypes.swift */,
+			);
+			path = CueTypes;
+			sourceTree = "<group>";
+		};
+		BA8275B224D326E10083EDA1 /* AccuracyLevels */ = {
+			isa = PBXGroup;
+			children = (
+				BA8275B724D327980083EDA1 /* AccuracyLevels.swift */,
+			);
+			path = AccuracyLevels;
+			sourceTree = "<group>";
+		};
 		BA8D3AE624C1F9AA009C0389 = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +193,9 @@
 		BA8D3B0924C1F9C6009C0389 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BA8275B224D326E10083EDA1 /* AccuracyLevels */,
+				BA8275B124D326DA0083EDA1 /* CueTypes */,
+				BA8275B024D326CC0083EDA1 /* CueLevels */,
 				BA82752124C5D94A0083EDA1 /* DataModel.swift */,
 				BA82758E24CA01EC0083EDA1 /* GoalArrays.swift */,
 			);
@@ -293,10 +326,13 @@
 				BA82759724CB7E910083EDA1 /* CuesAndAccuracyViewController.swift in Sources */,
 				BA82759124CA15600083EDA1 /* SelectGoalTableCell.swift in Sources */,
 				BA8D3AF524C1F9AA009C0389 /* SceneDelegate.swift in Sources */,
+				BA8275B424D326F10083EDA1 /* CueLevelEnum.swift in Sources */,
 				BA82751E24C4A6950083EDA1 /* CaseloadTableViewCell.swift in Sources */,
+				BA8275B824D327980083EDA1 /* AccuracyLevels.swift in Sources */,
 				BA82751824C258E10083EDA1 /* CaseloadViewController.swift in Sources */,
 				BA82752224C5D94A0083EDA1 /* DataModel.swift in Sources */,
 				BA82751C24C260E90083EDA1 /* TabBarVC.swift in Sources */,
+				BA8275B624D327520083EDA1 /* CueTypes.swift in Sources */,
 				BA82759524CB4FC00083EDA1 /* CategorySelectCell.swift in Sources */,
 				BA82754724C61E8B0083EDA1 /* GoalTableViewCell.swift in Sources */,
 				BA82751A24C258F10083EDA1 /* GroupsViewController.swift in Sources */,

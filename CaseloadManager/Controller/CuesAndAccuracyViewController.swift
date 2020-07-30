@@ -18,32 +18,46 @@ class CuesAndAccuracyViewController: UIViewController {
     @IBOutlet weak var goalLabel: UILabel!
     
     var goalString: String?
+    let tintColor: UIColor = UIColor(red: 54/255, green: 69/255, blue: 79/255, alpha: 1.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         goalLabel.text = "Client will " + goalString!
-        setUpBtns(btns: cueLevelBtns)
-        setUpBtns(btns: cueTypeBtns)
-        setUpBtns(btns: accuracyBtns)
+        setUpDefaultBtns(btns: cueLevelBtns)
+        setUpDefaultBtns(btns: cueTypeBtns)
+        setUpDefaultBtns(btns: accuracyBtns)
     }
     
-    func setUpBtns(btns: [UIButton]) {
+    func setUpDefaultBtns(btns: [UIButton]) {
         for btn in btns {
-            btn.backgroundColor = .lightGray
-            btn.setTitleColor(UIColor(red: 54, green: 69, blue: 79, alpha: 1), for: .normal)
             btn.layer.cornerRadius = 25
             btn.layer.borderWidth = 1.0
             btn.layer.borderColor = UIColor.darkGray.cgColor
         }
     }
     
-    @IBAction func cueLevelSelected(_ sender: Any) {
+    
+    fileprivate func selectButtons(_ sender: UIButton, btns: [UIButton]) {
+        btns.forEach({ $0.backgroundColor = .systemGray6
+            $0.isSelected = false
+            $0.setTitleColor(tintColor, for: .normal)
+        })
         
-    }
-    @IBAction func cueTypeSelected(_ sender: Any) {
+        sender.backgroundColor = tintColor
+        sender.isSelected = true
+        sender.setTitleColor(.white, for: .selected)
     }
     
-    @IBAction func accuracySelected(_ sender: Any) {
+    @IBAction func cueLevelSelected(_ sender: UIButton) {
+        selectButtons(sender, btns: cueLevelBtns)
+        
+    }
+    @IBAction func cueTypeSelected(_ sender: UIButton) {
+        selectButtons(sender, btns: cueTypeBtns)
+    }
+    
+    @IBAction func accuracySelected(_ sender: UIButton) {
+        selectButtons(sender, btns: accuracyBtns)
     }
     
     @IBAction func saveGoalPressed(_ sender: Any) {
