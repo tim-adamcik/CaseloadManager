@@ -9,6 +9,10 @@
 import Foundation
 import UIKit
 
+protocol AddGoalDelegate {
+    func addGoal(goal: Goal)
+}
+
 class CuesAndAccuracyViewController: UIViewController {
     
     @IBOutlet var cueLevelBtns: [UIButton]!
@@ -19,6 +23,7 @@ class CuesAndAccuracyViewController: UIViewController {
     
     var goalString: String?
     let tintColor: UIColor = UIColor(red: 54/255, green: 69/255, blue: 79/255, alpha: 1.0)
+    var delegate: AddGoalDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +65,48 @@ class CuesAndAccuracyViewController: UIViewController {
         selectButtons(sender, btns: accuracyBtns)
     }
     
+    func createGoalString() -> String {
+        
+        let goalStringCreated: String = goalLabel.text!
+        var cueLevel: String = ""
+        var cueType: String = ""
+        var accuracyLevel: String = ""
+        
+        for btn in cueLevelBtns {
+            if btn.isSelected {
+                if let label = btn.titleLabel?.text {
+                    if label == "Independently" {
+                        cueLevel.append(" independently ")
+                    } else {
+                        cueLevel.append(" given \(label.lowercased()) ")
+                    }
+                }
+            }
+        }
+        for btn in cueTypeBtns {
+            if btn.isSelected {
+                if let label = btn.titleLabel?.text {
+                    cueType.append("\(label.lowercased()) cues ")
+                } else {
+                    cueType.append("")
+                }
+            }
+        }
+        for btn in accuracyBtns {
+            if btn.isSelected {
+                if let label = btn.titleLabel?.text {
+                    accuracyLevel.append("with \(label) accuracy.")
+                }
+            }
+        }
+        return goalStringCreated + cueLevel + cueType + accuracyLevel
+    }
+    
     @IBAction func saveGoalPressed(_ sender: Any) {
+        
+        print(createGoalString())
+        
+//        delegate?.addGoal(goal: <#T##Goal#>)
     }
     
     

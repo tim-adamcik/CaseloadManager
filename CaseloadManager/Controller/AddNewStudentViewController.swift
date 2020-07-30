@@ -23,10 +23,12 @@ class AddNewStudentViewController: UIViewController {
     @IBOutlet weak var tbl_height: NSLayoutConstraint!
     
     var activeTextField: UITextField? = nil
-    let disorders = ["Speech", "Language", "Speech and Language", "Cognitive Impairment", "Dysphagia"]
-    let grades = ["Early Childhood", "Pre-K", "K", "1","2","3","4","5","6","7","8","9","10","11","12","Adult"]
+    let disorders = ["Select Disorder","Speech", "Language", "Speech and Language", "Cognitive Impairment", "Dysphagia"]
+    let grades = ["Select Grade","Early Childhood", "Pre-K", "K", "1","2","3","4","5","6","7","8","9","10","11","12","Adult"]
     var pickerView = UIPickerView()
     let datePicker = UIDatePicker()
+    
+    var goals: [Goal] = []
     
     lazy var cancelBtn: UIBarButtonItem = {
         let barBtnItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelBtnPressed(_:)))

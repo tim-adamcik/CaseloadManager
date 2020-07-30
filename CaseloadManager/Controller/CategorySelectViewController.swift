@@ -15,7 +15,7 @@ class CategorySelectViewController: UIViewController {
     @IBOutlet weak var selectCategoryTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
-    let categories = ["Custom", "Articulation", "Phonology", "Receptive Language", "Expressive Language", "Hearing", "AAC", "Pragmatics", "Dysphagia", "Fluency", "Voice", "Cognition"]
+    let categories = ["Select Category","Custom", "Articulation", "Phonology", "Receptive Language", "Expressive Language", "Hearing", "AAC", "Pragmatics", "Dysphagia", "Fluency", "Voice", "Cognition"]
     var currentArray: [String]? = []
     var currentCategory: String?
     
