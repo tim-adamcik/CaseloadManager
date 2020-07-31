@@ -30,10 +30,7 @@
 		BA82754424C5F2040083EDA1 /* Nunito-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA82753524C5F2030083EDA1 /* Nunito-Italic.ttf */; };
 		BA82754524C5F2040083EDA1 /* Nunito-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA82753624C5F2030083EDA1 /* Nunito-LightItalic.ttf */; };
 		BA82754724C61E8B0083EDA1 /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82754624C61E8B0083EDA1 /* GoalTableViewCell.swift */; };
-		BA82758B24C9D6700083EDA1 /* SelectCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82758A24C9D6700083EDA1 /* SelectCategoryViewController.swift */; };
-		BA82758D24C9D6880083EDA1 /* SelectGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82758C24C9D6880083EDA1 /* SelectGoalViewController.swift */; };
 		BA82758F24CA01EC0083EDA1 /* GoalArrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82758E24CA01EC0083EDA1 /* GoalArrays.swift */; };
-		BA82759124CA15600083EDA1 /* SelectGoalTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82759024CA15600083EDA1 /* SelectGoalTableCell.swift */; };
 		BA82759324CB429C0083EDA1 /* CategorySelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82759224CB429C0083EDA1 /* CategorySelectViewController.swift */; };
 		BA82759524CB4FC00083EDA1 /* CategorySelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82759424CB4FC00083EDA1 /* CategorySelectCell.swift */; };
 		BA82759724CB7E910083EDA1 /* CuesAndAccuracyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA82759624CB7E910083EDA1 /* CuesAndAccuracyViewController.swift */; };
@@ -41,7 +38,7 @@
 		BA8275B424D326F10083EDA1 /* CueLevelEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275B324D326F10083EDA1 /* CueLevelEnum.swift */; };
 		BA8275B624D327520083EDA1 /* CueTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275B524D327520083EDA1 /* CueTypes.swift */; };
 		BA8275B824D327980083EDA1 /* AccuracyLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275B724D327980083EDA1 /* AccuracyLevels.swift */; };
-		BA8275BC24D461D20083EDA1 /* CreatedGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275BB24D461D20083EDA1 /* CreatedGoals.swift */; };
+		BA8275BF24D47D610083EDA1 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275BE24D47D610083EDA1 /* CoreDataStack.swift */; };
 		BA8D3AF324C1F9AA009C0389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF224C1F9AA009C0389 /* AppDelegate.swift */; };
 		BA8D3AF524C1F9AA009C0389 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF424C1F9AA009C0389 /* SceneDelegate.swift */; };
 		BA8D3AF724C1F9AA009C0389 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF624C1F9AA009C0389 /* SplashViewController.swift */; };
@@ -77,10 +74,7 @@
 		BA82753524C5F2030083EDA1 /* Nunito-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Italic.ttf"; sourceTree = "<group>"; };
 		BA82753624C5F2030083EDA1 /* Nunito-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-LightItalic.ttf"; sourceTree = "<group>"; };
 		BA82754624C61E8B0083EDA1 /* GoalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
-		BA82758A24C9D6700083EDA1 /* SelectCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryViewController.swift; sourceTree = "<group>"; };
-		BA82758C24C9D6880083EDA1 /* SelectGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGoalViewController.swift; sourceTree = "<group>"; };
 		BA82758E24CA01EC0083EDA1 /* GoalArrays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalArrays.swift; sourceTree = "<group>"; };
-		BA82759024CA15600083EDA1 /* SelectGoalTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGoalTableCell.swift; sourceTree = "<group>"; };
 		BA82759224CB429C0083EDA1 /* CategorySelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectViewController.swift; sourceTree = "<group>"; };
 		BA82759424CB4FC00083EDA1 /* CategorySelectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectCell.swift; sourceTree = "<group>"; };
 		BA82759624CB7E910083EDA1 /* CuesAndAccuracyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuesAndAccuracyViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +82,7 @@
 		BA8275B324D326F10083EDA1 /* CueLevelEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueLevelEnum.swift; sourceTree = "<group>"; };
 		BA8275B524D327520083EDA1 /* CueTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueTypes.swift; sourceTree = "<group>"; };
 		BA8275B724D327980083EDA1 /* AccuracyLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccuracyLevels.swift; sourceTree = "<group>"; };
-		BA8275BB24D461D20083EDA1 /* CreatedGoals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedGoals.swift; sourceTree = "<group>"; };
+		BA8275BE24D47D610083EDA1 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		BA8D3AEF24C1F9AA009C0389 /* CaseloadManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaseloadManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8D3AF224C1F9AA009C0389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA8D3AF424C1F9AA009C0389 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +153,13 @@
 			path = AccuracyLevels;
 			sourceTree = "<group>";
 		};
+		BA8275BD24D47D310083EDA1 /* NSManagedObjects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSManagedObjects;
+			sourceTree = "<group>";
+		};
 		BA8D3AE624C1F9AA009C0389 = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +182,7 @@
 				BA8D3B0924C1F9C6009C0389 /* Model */,
 				BA8D3B0B24C1F9D9009C0389 /* Controller */,
 				BA8D3B0A24C1F9D1009C0389 /* View */,
+				BA8275BD24D47D310083EDA1 /* NSManagedObjects */,
 				BA8D3AF224C1F9AA009C0389 /* AppDelegate.swift */,
 				BA8D3AF424C1F9AA009C0389 /* SceneDelegate.swift */,
 				BA8D3AF824C1F9AA009C0389 /* Main.storyboard */,
@@ -200,7 +202,7 @@
 				BA8275B024D326CC0083EDA1 /* CueLevels */,
 				BA82752124C5D94A0083EDA1 /* DataModel.swift */,
 				BA82758E24CA01EC0083EDA1 /* GoalArrays.swift */,
-				BA8275BB24D461D20083EDA1 /* CreatedGoals.swift */,
+				BA8275BE24D47D610083EDA1 /* CoreDataStack.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -211,7 +213,6 @@
 				BA82751D24C4A6950083EDA1 /* CaseloadTableViewCell.swift */,
 				BA82751F24C4A6B70083EDA1 /* GroupsTableViewCell.swift */,
 				BA82754624C61E8B0083EDA1 /* GoalTableViewCell.swift */,
-				BA82759024CA15600083EDA1 /* SelectGoalTableCell.swift */,
 				BA82759424CB4FC00083EDA1 /* CategorySelectCell.swift */,
 				BA82752724C5F2030083EDA1 /* Nunito */,
 				BA8275AE24D0D80A0083EDA1 /* CustomButton.swift */,
@@ -229,8 +230,6 @@
 				BA82751924C258F10083EDA1 /* GroupsViewController.swift */,
 				BA82751B24C260E90083EDA1 /* TabBarVC.swift */,
 				BA82752524C5E75F0083EDA1 /* AddNewStudentViewController.swift */,
-				BA82758A24C9D6700083EDA1 /* SelectCategoryViewController.swift */,
-				BA82758C24C9D6880083EDA1 /* SelectGoalViewController.swift */,
 				BA82759224CB429C0083EDA1 /* CategorySelectViewController.swift */,
 				BA82759624CB7E910083EDA1 /* CuesAndAccuracyViewController.swift */,
 			);
@@ -324,11 +323,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA82752624C5E75F0083EDA1 /* AddNewStudentViewController.swift in Sources */,
+				BA8275BF24D47D610083EDA1 /* CoreDataStack.swift in Sources */,
 				BA8D3AF724C1F9AA009C0389 /* SplashViewController.swift in Sources */,
 				BA8D3AF324C1F9AA009C0389 /* AppDelegate.swift in Sources */,
-				BA8275BC24D461D20083EDA1 /* CreatedGoals.swift in Sources */,
 				BA82759724CB7E910083EDA1 /* CuesAndAccuracyViewController.swift in Sources */,
-				BA82759124CA15600083EDA1 /* SelectGoalTableCell.swift in Sources */,
 				BA8D3AF524C1F9AA009C0389 /* SceneDelegate.swift in Sources */,
 				BA8275B424D326F10083EDA1 /* CueLevelEnum.swift in Sources */,
 				BA82751E24C4A6950083EDA1 /* CaseloadTableViewCell.swift in Sources */,
@@ -342,11 +340,9 @@
 				BA82751A24C258F10083EDA1 /* GroupsViewController.swift in Sources */,
 				BA82759324CB429C0083EDA1 /* CategorySelectViewController.swift in Sources */,
 				BA82752024C4A6B70083EDA1 /* GroupsTableViewCell.swift in Sources */,
-				BA82758D24C9D6880083EDA1 /* SelectGoalViewController.swift in Sources */,
 				BA82758F24CA01EC0083EDA1 /* GoalArrays.swift in Sources */,
 				BA8D3B0D24C1FF44009C0389 /* LoginViewController.swift in Sources */,
 				BA8275AF24D0D80A0083EDA1 /* CustomButton.swift in Sources */,
-				BA82758B24C9D6700083EDA1 /* SelectCategoryViewController.swift in Sources */,
 				BA8D3B0F24C1FF7C009C0389 /* AgeGroupViewController.swift in Sources */,
 				BA8D3AFD24C1F9AA009C0389 /* CaseloadManager.xcdatamodeld in Sources */,
 			);

@@ -36,7 +36,6 @@ class CaseloadViewController: UIViewController {
     @objc func addStudent(_ sender: Any) {
         let nc = storyboard?.instantiateViewController(identifier: "NewStudentNC") as! UINavigationController
         nc.modalPresentationStyle = .fullScreen
-        CreatedGoals.shared.goals = []
         present(nc, animated: true)
     }
     
