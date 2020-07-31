@@ -18,6 +18,7 @@ class CategorySelectViewController: UIViewController {
     let categories = ["Select Category","Custom", "Articulation", "Phonology", "Receptive Language", "Expressive Language", "Hearing", "AAC", "Pragmatics", "Dysphagia", "Fluency", "Voice", "Cognition"]
     var currentArray: [String]? = []
     var currentCategory: String?
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()

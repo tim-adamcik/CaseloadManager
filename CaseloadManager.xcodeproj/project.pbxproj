@@ -41,6 +41,7 @@
 		BA8275B424D326F10083EDA1 /* CueLevelEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275B324D326F10083EDA1 /* CueLevelEnum.swift */; };
 		BA8275B624D327520083EDA1 /* CueTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275B524D327520083EDA1 /* CueTypes.swift */; };
 		BA8275B824D327980083EDA1 /* AccuracyLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275B724D327980083EDA1 /* AccuracyLevels.swift */; };
+		BA8275BC24D461D20083EDA1 /* CreatedGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275BB24D461D20083EDA1 /* CreatedGoals.swift */; };
 		BA8D3AF324C1F9AA009C0389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF224C1F9AA009C0389 /* AppDelegate.swift */; };
 		BA8D3AF524C1F9AA009C0389 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF424C1F9AA009C0389 /* SceneDelegate.swift */; };
 		BA8D3AF724C1F9AA009C0389 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF624C1F9AA009C0389 /* SplashViewController.swift */; };
@@ -87,6 +88,7 @@
 		BA8275B324D326F10083EDA1 /* CueLevelEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueLevelEnum.swift; sourceTree = "<group>"; };
 		BA8275B524D327520083EDA1 /* CueTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueTypes.swift; sourceTree = "<group>"; };
 		BA8275B724D327980083EDA1 /* AccuracyLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccuracyLevels.swift; sourceTree = "<group>"; };
+		BA8275BB24D461D20083EDA1 /* CreatedGoals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedGoals.swift; sourceTree = "<group>"; };
 		BA8D3AEF24C1F9AA009C0389 /* CaseloadManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaseloadManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8D3AF224C1F9AA009C0389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA8D3AF424C1F9AA009C0389 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				BA8275B024D326CC0083EDA1 /* CueLevels */,
 				BA82752124C5D94A0083EDA1 /* DataModel.swift */,
 				BA82758E24CA01EC0083EDA1 /* GoalArrays.swift */,
+				BA8275BB24D461D20083EDA1 /* CreatedGoals.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				BA82752624C5E75F0083EDA1 /* AddNewStudentViewController.swift in Sources */,
 				BA8D3AF724C1F9AA009C0389 /* SplashViewController.swift in Sources */,
 				BA8D3AF324C1F9AA009C0389 /* AppDelegate.swift in Sources */,
+				BA8275BC24D461D20083EDA1 /* CreatedGoals.swift in Sources */,
 				BA82759724CB7E910083EDA1 /* CuesAndAccuracyViewController.swift in Sources */,
 				BA82759124CA15600083EDA1 /* SelectGoalTableCell.swift in Sources */,
 				BA8D3AF524C1F9AA009C0389 /* SceneDelegate.swift in Sources */,

@@ -9,9 +9,7 @@
 import Foundation
 import UIKit
 
-protocol AddGoalDelegate {
-    func addGoal(goal: Goal)
-}
+
 
 class CuesAndAccuracyViewController: UIViewController {
     
@@ -23,7 +21,7 @@ class CuesAndAccuracyViewController: UIViewController {
     
     var goalString: String?
     let tintColor: UIColor = UIColor(red: 54/255, green: 69/255, blue: 79/255, alpha: 1.0)
-    var delegate: AddGoalDelegate?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,9 +102,11 @@ class CuesAndAccuracyViewController: UIViewController {
     
     @IBAction func saveGoalPressed(_ sender: Any) {
         
-        print(createGoalString())
+        let goal = Goal(goal: createGoalString(), data: nil)
+        NotificationCenter.default.post(name: Notification.Name("goal"), object: goal)
+        print(goal.goal)
         
-//        delegate?.addGoal(goal: <#T##Goal#>)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     

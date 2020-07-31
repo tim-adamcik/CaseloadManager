@@ -27,8 +27,9 @@ class AddNewStudentViewController: UIViewController {
     let grades = ["Select Grade","Early Childhood", "Pre-K", "K", "1","2","3","4","5","6","7","8","9","10","11","12","Adult"]
     var pickerView = UIPickerView()
     let datePicker = UIDatePicker()
-    
     var goals: [Goal] = []
+    
+   
     
     lazy var cancelBtn: UIBarButtonItem = {
         let barBtnItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelBtnPressed(_:)))
@@ -59,8 +60,20 @@ class AddNewStudentViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(AddNewStudentViewController.keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(AddNewStudentViewController.keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didGetNotification(_:)), name: Notification.Name("goal"), object: nil)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tableView.reloadData()
+    }
+    
+    @objc func didGetNotification(_ notification: Notification) {
+        if let goal = notification.object as! Goal? {
+          goals.append(goal)
+        }
+        tableView.reloadData()
+    }
 
     @objc func keyboardWillShow(notification: NSNotification) {
         guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
@@ -150,7 +163,7 @@ extension AddNewStudentViewController: UITextFieldDelegate {
 
 extension AddNewStudentViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return goals.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -163,8 +176,8 @@ extension AddNewStudentViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GoalTableViewCell") as! GoalTableViewCell
-        
-        cell.goalLabel.text = "Student will produce /sh/ with 100% accuracy."
+        let goal = goals[indexPath.row]
+        cell.goalLabel.text = goal.goal
         return cell
     }
 }
@@ -230,3 +243,4 @@ extension AddNewStudentViewController: UIPickerViewDelegate, UIPickerViewDataSou
         }
     }
 }
+
