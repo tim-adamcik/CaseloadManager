@@ -1,4 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AgeGroup" representedClassName="AgeGroup" syncable="YES">
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="studentGroups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StudentGroup" inverseName="ageGroup" inverseEntity="StudentGroup"/>
+        <relationship name="students" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" inverseName="ageGroup" inverseEntity="Student"/>
+    </entity>
+    <entity name="CustomGoals" representedClassName="CustomGoals" syncable="YES">
+        <attribute name="customGoal" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Goal" representedClassName="Goal" syncable="YES">
+        <attribute name="goal" optional="YES" attributeType="String"/>
+        <relationship name="goalData" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GoalData" inverseName="goal" inverseEntity="GoalData"/>
+        <relationship name="student" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" inverseName="goals" inverseEntity="Student"/>
+    </entity>
+    <entity name="GoalData" representedClassName="GoalData" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="percentage" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="goal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Goal" inverseName="goalData" inverseEntity="Goal"/>
+    </entity>
+    <entity name="Student" representedClassName="Student" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="caseManager" optional="YES" attributeType="String"/>
+        <attribute name="disorder" optional="YES" attributeType="String"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="grade" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="studentID" optional="YES" attributeType="String"/>
+        <relationship name="ageGroup" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AgeGroup" inverseName="students" inverseEntity="AgeGroup"/>
+        <relationship name="goals" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Goal" inverseName="student" inverseEntity="Goal"/>
+        <relationship name="studentGroup" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StudentGroup" inverseName="students" inverseEntity="StudentGroup"/>
+    </entity>
+    <entity name="StudentGroup" representedClassName="StudentGroup" syncable="YES">
+        <attribute name="day" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="sessionLength" optional="YES" attributeType="String"/>
+        <relationship name="ageGroup" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AgeGroup" inverseName="studentGroups" inverseEntity="AgeGroup"/>
+        <relationship name="students" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" inverseName="studentGroup" inverseEntity="Student"/>
+    </entity>
+    <elements>
+        <element name="AgeGroup" positionX="-397.1171875" positionY="-319.28515625" width="128" height="88"/>
+        <element name="Student" positionX="-696.72265625" positionY="-188.875" width="128" height="208"/>
+        <element name="Goal" positionX="-411.61328125" positionY="110.31640625" width="128" height="88"/>
+        <element name="GoalData" positionX="-205.83203125" positionY="157.41796875" width="128" height="88"/>
+        <element name="CustomGoals" positionX="-52.78515625" positionY="-63.8515625" width="128" height="58"/>
+        <element name="StudentGroup" positionX="-132.8125" positionY="-251.9609375" width="128" height="118"/>
+    </elements>
 </model>

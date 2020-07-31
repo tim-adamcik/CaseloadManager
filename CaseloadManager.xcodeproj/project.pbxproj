@@ -39,6 +39,18 @@
 		BA8275B624D327520083EDA1 /* CueTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275B524D327520083EDA1 /* CueTypes.swift */; };
 		BA8275B824D327980083EDA1 /* AccuracyLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275B724D327980083EDA1 /* AccuracyLevels.swift */; };
 		BA8275BF24D47D610083EDA1 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275BE24D47D610083EDA1 /* CoreDataStack.swift */; };
+		BA8275CC24D493550083EDA1 /* GoalData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275C024D493550083EDA1 /* GoalData+CoreDataClass.swift */; };
+		BA8275CD24D493550083EDA1 /* GoalData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275C124D493550083EDA1 /* GoalData+CoreDataProperties.swift */; };
+		BA8275CE24D493550083EDA1 /* CustomGoals+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275C224D493550083EDA1 /* CustomGoals+CoreDataClass.swift */; };
+		BA8275CF24D493550083EDA1 /* CustomGoals+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275C324D493550083EDA1 /* CustomGoals+CoreDataProperties.swift */; };
+		BA8275D024D493550083EDA1 /* AgeGroup+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275C424D493550083EDA1 /* AgeGroup+CoreDataClass.swift */; };
+		BA8275D124D493550083EDA1 /* AgeGroup+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275C524D493550083EDA1 /* AgeGroup+CoreDataProperties.swift */; };
+		BA8275D224D493550083EDA1 /* Student+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275C624D493550083EDA1 /* Student+CoreDataClass.swift */; };
+		BA8275D324D493550083EDA1 /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275C724D493550083EDA1 /* Student+CoreDataProperties.swift */; };
+		BA8275D424D493550083EDA1 /* StudentGroup+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275C824D493550083EDA1 /* StudentGroup+CoreDataClass.swift */; };
+		BA8275D524D493550083EDA1 /* StudentGroup+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275C924D493550083EDA1 /* StudentGroup+CoreDataProperties.swift */; };
+		BA8275D624D493550083EDA1 /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275CA24D493550083EDA1 /* Goal+CoreDataClass.swift */; };
+		BA8275D724D493550083EDA1 /* Goal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275CB24D493550083EDA1 /* Goal+CoreDataProperties.swift */; };
 		BA8D3AF324C1F9AA009C0389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF224C1F9AA009C0389 /* AppDelegate.swift */; };
 		BA8D3AF524C1F9AA009C0389 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF424C1F9AA009C0389 /* SceneDelegate.swift */; };
 		BA8D3AF724C1F9AA009C0389 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF624C1F9AA009C0389 /* SplashViewController.swift */; };
@@ -83,6 +95,18 @@
 		BA8275B524D327520083EDA1 /* CueTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CueTypes.swift; sourceTree = "<group>"; };
 		BA8275B724D327980083EDA1 /* AccuracyLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccuracyLevels.swift; sourceTree = "<group>"; };
 		BA8275BE24D47D610083EDA1 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		BA8275C024D493550083EDA1 /* GoalData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoalData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA8275C124D493550083EDA1 /* GoalData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoalData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA8275C224D493550083EDA1 /* CustomGoals+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomGoals+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA8275C324D493550083EDA1 /* CustomGoals+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomGoals+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA8275C424D493550083EDA1 /* AgeGroup+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AgeGroup+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA8275C524D493550083EDA1 /* AgeGroup+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AgeGroup+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA8275C624D493550083EDA1 /* Student+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA8275C724D493550083EDA1 /* Student+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA8275C824D493550083EDA1 /* StudentGroup+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudentGroup+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA8275C924D493550083EDA1 /* StudentGroup+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudentGroup+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA8275CA24D493550083EDA1 /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA8275CB24D493550083EDA1 /* Goal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA8D3AEF24C1F9AA009C0389 /* CaseloadManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaseloadManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8D3AF224C1F9AA009C0389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA8D3AF424C1F9AA009C0389 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +180,18 @@
 		BA8275BD24D47D310083EDA1 /* NSManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
+				BA8275C024D493550083EDA1 /* GoalData+CoreDataClass.swift */,
+				BA8275C124D493550083EDA1 /* GoalData+CoreDataProperties.swift */,
+				BA8275C224D493550083EDA1 /* CustomGoals+CoreDataClass.swift */,
+				BA8275C324D493550083EDA1 /* CustomGoals+CoreDataProperties.swift */,
+				BA8275C424D493550083EDA1 /* AgeGroup+CoreDataClass.swift */,
+				BA8275C524D493550083EDA1 /* AgeGroup+CoreDataProperties.swift */,
+				BA8275C624D493550083EDA1 /* Student+CoreDataClass.swift */,
+				BA8275C724D493550083EDA1 /* Student+CoreDataProperties.swift */,
+				BA8275C824D493550083EDA1 /* StudentGroup+CoreDataClass.swift */,
+				BA8275C924D493550083EDA1 /* StudentGroup+CoreDataProperties.swift */,
+				BA8275CA24D493550083EDA1 /* Goal+CoreDataClass.swift */,
+				BA8275CB24D493550083EDA1 /* Goal+CoreDataProperties.swift */,
 			);
 			path = NSManagedObjects;
 			sourceTree = "<group>";
@@ -322,26 +358,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA8275CF24D493550083EDA1 /* CustomGoals+CoreDataProperties.swift in Sources */,
 				BA82752624C5E75F0083EDA1 /* AddNewStudentViewController.swift in Sources */,
 				BA8275BF24D47D610083EDA1 /* CoreDataStack.swift in Sources */,
 				BA8D3AF724C1F9AA009C0389 /* SplashViewController.swift in Sources */,
+				BA8275D624D493550083EDA1 /* Goal+CoreDataClass.swift in Sources */,
+				BA8275D724D493550083EDA1 /* Goal+CoreDataProperties.swift in Sources */,
 				BA8D3AF324C1F9AA009C0389 /* AppDelegate.swift in Sources */,
+				BA8275D024D493550083EDA1 /* AgeGroup+CoreDataClass.swift in Sources */,
+				BA8275D424D493550083EDA1 /* StudentGroup+CoreDataClass.swift in Sources */,
 				BA82759724CB7E910083EDA1 /* CuesAndAccuracyViewController.swift in Sources */,
 				BA8D3AF524C1F9AA009C0389 /* SceneDelegate.swift in Sources */,
 				BA8275B424D326F10083EDA1 /* CueLevelEnum.swift in Sources */,
 				BA82751E24C4A6950083EDA1 /* CaseloadTableViewCell.swift in Sources */,
+				BA8275D324D493550083EDA1 /* Student+CoreDataProperties.swift in Sources */,
 				BA8275B824D327980083EDA1 /* AccuracyLevels.swift in Sources */,
 				BA82751824C258E10083EDA1 /* CaseloadViewController.swift in Sources */,
 				BA82752224C5D94A0083EDA1 /* DataModel.swift in Sources */,
+				BA8275CE24D493550083EDA1 /* CustomGoals+CoreDataClass.swift in Sources */,
 				BA82751C24C260E90083EDA1 /* TabBarVC.swift in Sources */,
 				BA8275B624D327520083EDA1 /* CueTypes.swift in Sources */,
 				BA82759524CB4FC00083EDA1 /* CategorySelectCell.swift in Sources */,
 				BA82754724C61E8B0083EDA1 /* GoalTableViewCell.swift in Sources */,
 				BA82751A24C258F10083EDA1 /* GroupsViewController.swift in Sources */,
+				BA8275D224D493550083EDA1 /* Student+CoreDataClass.swift in Sources */,
+				BA8275D124D493550083EDA1 /* AgeGroup+CoreDataProperties.swift in Sources */,
+				BA8275CC24D493550083EDA1 /* GoalData+CoreDataClass.swift in Sources */,
 				BA82759324CB429C0083EDA1 /* CategorySelectViewController.swift in Sources */,
 				BA82752024C4A6B70083EDA1 /* GroupsTableViewCell.swift in Sources */,
 				BA82758F24CA01EC0083EDA1 /* GoalArrays.swift in Sources */,
+				BA8275CD24D493550083EDA1 /* GoalData+CoreDataProperties.swift in Sources */,
 				BA8D3B0D24C1FF44009C0389 /* LoginViewController.swift in Sources */,
+				BA8275D524D493550083EDA1 /* StudentGroup+CoreDataProperties.swift in Sources */,
 				BA8275AF24D0D80A0083EDA1 /* CustomButton.swift in Sources */,
 				BA8D3B0F24C1FF7C009C0389 /* AgeGroupViewController.swift in Sources */,
 				BA8D3AFD24C1F9AA009C0389 /* CaseloadManager.xcdatamodeld in Sources */,
