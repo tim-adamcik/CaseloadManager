@@ -20,14 +20,16 @@ class AddNewStudentViewController: UIViewController {
     @IBOutlet weak var enterDisorderTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var tbl_height: NSLayoutConstraint!
+    @IBOutlet weak var studentIDLabel: UILabel!
+    @IBOutlet weak var studentIDTextField: UITextField!
+    
     
     var activeTextField: UITextField? = nil
     let disorders = ["Select Disorder","Speech", "Language", "Speech and Language", "Cognitive Impairment", "Dysphagia"]
     let grades = ["Select Grade","Early Childhood", "Pre-K", "K", "1","2","3","4","5","6","7","8","9","10","11","12","Adult"]
     var pickerView = UIPickerView()
     let datePicker = UIDatePicker()
-    var goals: [Goal] = []
+    var goals: [GoalMade] = []
     
    
     
@@ -40,6 +42,7 @@ class AddNewStudentViewController: UIViewController {
         firstNameTextField.delegate = self
         lastNameTextField.delegate = self
         enterAgeTextField.delegate = self
+        studentIDTextField.delegate = self
         enterCaseManagerTextField.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
@@ -69,7 +72,7 @@ class AddNewStudentViewController: UIViewController {
     }
     
     @objc func didGetNotification(_ notification: Notification) {
-        if let goal = notification.object as! Goal? {
+        if let goal = notification.object as! GoalMade? {
           goals.append(goal)
         }
         tableView.reloadData()

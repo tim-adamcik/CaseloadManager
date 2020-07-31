@@ -21,7 +21,7 @@ class CaseloadViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         self.navigationItem.title = currentAgeGroup
-        var ageGroup = AgeGroup(name: currentAgeGroup, students: [])
+        
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add Student", style: .plain, target: self, action: #selector(addStudent(_:)))
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(goBackToAgeGroupSelection(_:)))

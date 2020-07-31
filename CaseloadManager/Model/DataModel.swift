@@ -36,10 +36,10 @@ import Foundation
 //    var goals: [Goal]?
 //}
 //
-//struct Goal {
-//    var goal: String
-//    var data: [GoalData]?
-//}
+struct GoalMade {
+    var goal: String
+    
+}
 //
 //struct GoalData {
 //    var date: Date

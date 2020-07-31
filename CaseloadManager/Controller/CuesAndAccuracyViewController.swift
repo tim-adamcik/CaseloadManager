@@ -102,7 +102,7 @@ class CuesAndAccuracyViewController: UIViewController {
     
     @IBAction func saveGoalPressed(_ sender: Any) {
         
-        let goal = Goal(goal: createGoalString(), data: nil)
+        let goal = GoalMade(goal: createGoalString())
         NotificationCenter.default.post(name: Notification.Name("goal"), object: goal)
         print(goal.goal)
         
