@@ -26,6 +26,7 @@
         <attribute name="firstName" optional="YES" attributeType="String"/>
         <attribute name="grade" optional="YES" attributeType="String"/>
         <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="sessionLength" optional="YES" attributeType="String"/>
         <attribute name="studentID" optional="YES" attributeType="String"/>
         <relationship name="ageGroup" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AgeGroup" inverseName="students" inverseEntity="AgeGroup"/>
         <relationship name="goals" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Goal" inverseName="student" inverseEntity="Goal"/>
@@ -40,7 +41,7 @@
     </entity>
     <elements>
         <element name="AgeGroup" positionX="-397.1171875" positionY="-319.28515625" width="128" height="88"/>
-        <element name="Student" positionX="-696.72265625" positionY="-188.875" width="128" height="208"/>
+        <element name="Student" positionX="-696.72265625" positionY="-188.875" width="128" height="223"/>
         <element name="Goal" positionX="-411.61328125" positionY="110.31640625" width="128" height="88"/>
         <element name="GoalData" positionX="-205.83203125" positionY="157.41796875" width="128" height="88"/>
         <element name="CustomGoals" positionX="-52.78515625" positionY="-63.8515625" width="128" height="58"/>

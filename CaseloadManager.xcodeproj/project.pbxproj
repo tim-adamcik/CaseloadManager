@@ -51,6 +51,8 @@
 		BA8275D524D493550083EDA1 /* StudentGroup+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275C924D493550083EDA1 /* StudentGroup+CoreDataProperties.swift */; };
 		BA8275D624D493550083EDA1 /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275CA24D493550083EDA1 /* Goal+CoreDataClass.swift */; };
 		BA8275D724D493550083EDA1 /* Goal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275CB24D493550083EDA1 /* Goal+CoreDataProperties.swift */; };
+		BA8275DE24D885540083EDA1 /* Student+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275DC24D885540083EDA1 /* Student+CoreDataClass.swift */; };
+		BA8275DF24D885540083EDA1 /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275DD24D885540083EDA1 /* Student+CoreDataProperties.swift */; };
 		BA8D3AF324C1F9AA009C0389 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF224C1F9AA009C0389 /* AppDelegate.swift */; };
 		BA8D3AF524C1F9AA009C0389 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF424C1F9AA009C0389 /* SceneDelegate.swift */; };
 		BA8D3AF724C1F9AA009C0389 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D3AF624C1F9AA009C0389 /* SplashViewController.swift */; };
@@ -107,6 +109,8 @@
 		BA8275C924D493550083EDA1 /* StudentGroup+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudentGroup+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA8275CA24D493550083EDA1 /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BA8275CB24D493550083EDA1 /* Goal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA8275DC24D885540083EDA1 /* Student+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA8275DD24D885540083EDA1 /* Student+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA8D3AEF24C1F9AA009C0389 /* CaseloadManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaseloadManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8D3AF224C1F9AA009C0389 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA8D3AF424C1F9AA009C0389 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -199,6 +203,8 @@
 		BA8D3AE624C1F9AA009C0389 = {
 			isa = PBXGroup;
 			children = (
+				BA8275DC24D885540083EDA1 /* Student+CoreDataClass.swift */,
+				BA8275DD24D885540083EDA1 /* Student+CoreDataProperties.swift */,
 				BA8D3AF124C1F9AA009C0389 /* CaseloadManager */,
 				BA8D3AF024C1F9AA009C0389 /* Products */,
 			);
@@ -367,6 +373,7 @@
 				BA8D3AF324C1F9AA009C0389 /* AppDelegate.swift in Sources */,
 				BA8275D024D493550083EDA1 /* AgeGroup+CoreDataClass.swift in Sources */,
 				BA8275D424D493550083EDA1 /* StudentGroup+CoreDataClass.swift in Sources */,
+				BA8275DF24D885540083EDA1 /* Student+CoreDataProperties.swift in Sources */,
 				BA82759724CB7E910083EDA1 /* CuesAndAccuracyViewController.swift in Sources */,
 				BA8D3AF524C1F9AA009C0389 /* SceneDelegate.swift in Sources */,
 				BA8275B424D326F10083EDA1 /* CueLevelEnum.swift in Sources */,
@@ -383,6 +390,7 @@
 				BA82751A24C258F10083EDA1 /* GroupsViewController.swift in Sources */,
 				BA8275D224D493550083EDA1 /* Student+CoreDataClass.swift in Sources */,
 				BA8275D124D493550083EDA1 /* AgeGroup+CoreDataProperties.swift in Sources */,
+				BA8275DE24D885540083EDA1 /* Student+CoreDataClass.swift in Sources */,
 				BA8275CC24D493550083EDA1 /* GoalData+CoreDataClass.swift in Sources */,
 				BA82759324CB429C0083EDA1 /* CategorySelectViewController.swift in Sources */,
 				BA82752024C4A6B70083EDA1 /* GroupsTableViewCell.swift in Sources */,

@@ -22,6 +22,7 @@ class AddNewStudentViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var studentIDLabel: UILabel!
     @IBOutlet weak var studentIDTextField: UITextField!
+    @IBOutlet weak var treatmentMinutesTextField: UITextField!
     
     
     var activeTextField: UITextField? = nil
@@ -43,6 +44,7 @@ class AddNewStudentViewController: UIViewController {
         lastNameTextField.delegate = self
         enterAgeTextField.delegate = self
         studentIDTextField.delegate = self
+        treatmentMinutesTextField.delegate = self
         enterCaseManagerTextField.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
@@ -60,6 +62,9 @@ class AddNewStudentViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = cancelBtn
         createTextFieldAndPickerDelegates()
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 60
+
         
         NotificationCenter.default.addObserver(self, selector: #selector(AddNewStudentViewController.keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(AddNewStudentViewController.keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
