@@ -8,12 +8,30 @@
 
 import Foundation
 import UIKit
+import CoreData
 
-class CaseloadViewController: UIViewController {
+class CaseloadViewController: UIViewController, NSFetchedResultsControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
     var currentAgeGroup: String!
+    var ageGroup: AgeGroup?
+    var studentArray: [Student]? = []
+    
+    lazy var studentFetchedResultsController: NSFetchedResultsController<Student> = {
+        let fetchRequest: NSFetchRequest<Student> = Student.fetchRequest()
+        let predicate = NSPredicate(format: "%K == %@", "ageGroup", currentAgeGroup)
+        fetchRequest.predicate = predicate
+        let lastNameSort = NSSortDescriptor(key: #keyPath(Student.lastName), ascending: true)
+        let firstNameSort = NSSortDescriptor(key: #keyPath(Student.firstName), ascending: true)
+        let sortDescriptors = [lastNameSort, firstNameSort]
+        fetchRequest.sortDescriptors = sortDescriptors
+        
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.shared.managedContext, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController.delegate = self
+        
+        return fetchedResultsController
+    }()
     
     
     override func viewDidLoad() {
@@ -30,12 +48,18 @@ class CaseloadViewController: UIViewController {
         let svc = barViewControllers![1] as! UINavigationController
         let secondVC = svc.viewControllers[0] as! GroupsViewController
         secondVC.currentAgeGroup = currentAgeGroup
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tableView.reloadData()
     }
     
     @objc func addStudent(_ sender: Any) {
         let nc = storyboard?.instantiateViewController(identifier: "NewStudentNC") as! UINavigationController
         nc.modalPresentationStyle = .fullScreen
+        let vc = nc.viewControllers[0] as! AddNewStudentViewController
+        vc.currentAgeGroup = ageGroup
         present(nc, animated: true)
     }
     
@@ -48,13 +72,19 @@ class CaseloadViewController: UIViewController {
 
 extension CaseloadViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return studentFetchedResultsController.sections?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CaseloadTableViewCell") as! CaseloadTableViewCell
-        cell.title.text = currentAgeGroup
-        cell.subtitle.text = "Student Name"
+        
+        if let studentCount = studentFetchedResultsController.sections?.count {
+            if studentCount >= 0 {
+                       let student = studentFetchedResultsController.object(at: indexPath)
+                       cell.title.text = student.lastName
+                       cell.subtitle.text = student.firstName
+                   }
+        }
         return cell
     }
     

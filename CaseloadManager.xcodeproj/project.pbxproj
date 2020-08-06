@@ -45,8 +45,6 @@
 		BA8275CF24D493550083EDA1 /* CustomGoals+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275C324D493550083EDA1 /* CustomGoals+CoreDataProperties.swift */; };
 		BA8275D024D493550083EDA1 /* AgeGroup+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275C424D493550083EDA1 /* AgeGroup+CoreDataClass.swift */; };
 		BA8275D124D493550083EDA1 /* AgeGroup+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275C524D493550083EDA1 /* AgeGroup+CoreDataProperties.swift */; };
-		BA8275D224D493550083EDA1 /* Student+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275C624D493550083EDA1 /* Student+CoreDataClass.swift */; };
-		BA8275D324D493550083EDA1 /* Student+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275C724D493550083EDA1 /* Student+CoreDataProperties.swift */; };
 		BA8275D424D493550083EDA1 /* StudentGroup+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275C824D493550083EDA1 /* StudentGroup+CoreDataClass.swift */; };
 		BA8275D524D493550083EDA1 /* StudentGroup+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275C924D493550083EDA1 /* StudentGroup+CoreDataProperties.swift */; };
 		BA8275D624D493550083EDA1 /* Goal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8275CA24D493550083EDA1 /* Goal+CoreDataClass.swift */; };
@@ -103,8 +101,6 @@
 		BA8275C324D493550083EDA1 /* CustomGoals+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomGoals+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA8275C424D493550083EDA1 /* AgeGroup+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AgeGroup+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BA8275C524D493550083EDA1 /* AgeGroup+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AgeGroup+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BA8275C624D493550083EDA1 /* Student+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BA8275C724D493550083EDA1 /* Student+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Student+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA8275C824D493550083EDA1 /* StudentGroup+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudentGroup+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BA8275C924D493550083EDA1 /* StudentGroup+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudentGroup+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA8275CA24D493550083EDA1 /* Goal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Goal+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -184,14 +180,14 @@
 		BA8275BD24D47D310083EDA1 /* NSManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
+				BA8275DC24D885540083EDA1 /* Student+CoreDataClass.swift */,
+				BA8275DD24D885540083EDA1 /* Student+CoreDataProperties.swift */,
 				BA8275C024D493550083EDA1 /* GoalData+CoreDataClass.swift */,
 				BA8275C124D493550083EDA1 /* GoalData+CoreDataProperties.swift */,
 				BA8275C224D493550083EDA1 /* CustomGoals+CoreDataClass.swift */,
 				BA8275C324D493550083EDA1 /* CustomGoals+CoreDataProperties.swift */,
 				BA8275C424D493550083EDA1 /* AgeGroup+CoreDataClass.swift */,
 				BA8275C524D493550083EDA1 /* AgeGroup+CoreDataProperties.swift */,
-				BA8275C624D493550083EDA1 /* Student+CoreDataClass.swift */,
-				BA8275C724D493550083EDA1 /* Student+CoreDataProperties.swift */,
 				BA8275C824D493550083EDA1 /* StudentGroup+CoreDataClass.swift */,
 				BA8275C924D493550083EDA1 /* StudentGroup+CoreDataProperties.swift */,
 				BA8275CA24D493550083EDA1 /* Goal+CoreDataClass.swift */,
@@ -203,8 +199,6 @@
 		BA8D3AE624C1F9AA009C0389 = {
 			isa = PBXGroup;
 			children = (
-				BA8275DC24D885540083EDA1 /* Student+CoreDataClass.swift */,
-				BA8275DD24D885540083EDA1 /* Student+CoreDataProperties.swift */,
 				BA8D3AF124C1F9AA009C0389 /* CaseloadManager */,
 				BA8D3AF024C1F9AA009C0389 /* Products */,
 			);
@@ -378,7 +372,6 @@
 				BA8D3AF524C1F9AA009C0389 /* SceneDelegate.swift in Sources */,
 				BA8275B424D326F10083EDA1 /* CueLevelEnum.swift in Sources */,
 				BA82751E24C4A6950083EDA1 /* CaseloadTableViewCell.swift in Sources */,
-				BA8275D324D493550083EDA1 /* Student+CoreDataProperties.swift in Sources */,
 				BA8275B824D327980083EDA1 /* AccuracyLevels.swift in Sources */,
 				BA82751824C258E10083EDA1 /* CaseloadViewController.swift in Sources */,
 				BA82752224C5D94A0083EDA1 /* DataModel.swift in Sources */,
@@ -388,7 +381,6 @@
 				BA82759524CB4FC00083EDA1 /* CategorySelectCell.swift in Sources */,
 				BA82754724C61E8B0083EDA1 /* GoalTableViewCell.swift in Sources */,
 				BA82751A24C258F10083EDA1 /* GroupsViewController.swift in Sources */,
-				BA8275D224D493550083EDA1 /* Student+CoreDataClass.swift in Sources */,
 				BA8275D124D493550083EDA1 /* AgeGroup+CoreDataProperties.swift in Sources */,
 				BA8275DE24D885540083EDA1 /* Student+CoreDataClass.swift in Sources */,
 				BA8275CC24D493550083EDA1 /* GoalData+CoreDataClass.swift in Sources */,

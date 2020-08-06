@@ -2,7 +2,7 @@
 //  Student+CoreDataProperties.swift
 //  CaseloadManager
 //
-//  Created by Timothy Adamcik on 7/31/20.
+//  Created by Timothy Adamcik on 8/3/20.
 //  Copyright © 2020 Timothy Adamcik. All rights reserved.
 //
 //
@@ -25,6 +25,7 @@ extension Student {
     @NSManaged public var caseManager: String?
     @NSManaged public var endDate: Date?
     @NSManaged public var disorder: String?
+    @NSManaged public var sessionLength: String?
     @NSManaged public var ageGroup: AgeGroup?
     @NSManaged public var goals: NSSet?
     @NSManaged public var studentGroup: StudentGroup?

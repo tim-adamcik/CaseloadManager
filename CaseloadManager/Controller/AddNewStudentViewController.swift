@@ -31,8 +31,13 @@ class AddNewStudentViewController: UIViewController {
     var pickerView = UIPickerView()
     let datePicker = UIDatePicker()
     var goals: [GoalMade] = []
+    var currentAgeGroup: AgeGroup?
     
-   
+    
+   lazy var saveStudentBtn: UIBarButtonItem = {
+       let barBtnItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveStudentBtnPressed(_:)))
+       return barBtnItem
+   }()
     
     lazy var cancelBtn: UIBarButtonItem = {
         let barBtnItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelBtnPressed(_:)))
@@ -54,13 +59,13 @@ class AddNewStudentViewController: UIViewController {
         createDatePicker()
         createPickerView()
         dismissPickerView()
-        
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = cancelBtn
+        navigationItem.rightBarButtonItem = saveStudentBtn
         createTextFieldAndPickerDelegates()
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 60
@@ -141,6 +146,41 @@ class AddNewStudentViewController: UIViewController {
         vc.modalPresentationStyle = .fullScreen
         
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc func saveStudentBtnPressed(_ sender: Any) {
+        
+        if lastNameTextField.text?.isEmpty ?? true {
+            displayAlertMessage(userMessage: "Please Enter Last Name")
+            return
+        } else if firstNameTextField.text?.isEmpty ?? true {
+            displayAlertMessage(userMessage: "Please Enter First Name")
+            return
+        }
+        
+        let newStudent = Student(context: CoreDataStack.shared.managedContext)
+        newStudent.ageGroup = currentAgeGroup
+        newStudent.firstName = firstNameTextField.text!
+        newStudent.lastName = lastNameTextField.text!
+        newStudent.grade = enterGradeTextField.text
+        if let ageInt = Int16(enterAgeTextField.text!) {
+            newStudent.age = ageInt
+        }
+        newStudent.studentID = studentIDTextField.text
+        newStudent.caseManager = enterCaseManagerTextField.text
+        newStudent.endDate = datePicker.date as Date
+        newStudent.disorder = enterDisorderTextField.text
+        newStudent.sessionLength = treatmentMinutesTextField.text
+        
+        CoreDataStack.shared.saveContext()
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func displayAlertMessage(userMessage: String) {
+        let alert = UIAlertController(title: "Error", message: userMessage, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true)
     }
     
     @objc func cancelBtnPressed(_ sender: Any) {

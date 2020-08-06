@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class AgeGroupViewController: UIViewController {
     
@@ -22,8 +23,31 @@ class AgeGroupViewController: UIViewController {
         let vc1 = nc1.viewControllers[0] as! CaseloadViewController
         let vc2 = nc2.viewControllers[0] as! GroupsViewController
         vc.modalPresentationStyle = .fullScreen
+        
+        var ageGroup: AgeGroup?
+        let ageFetch: NSFetchRequest<AgeGroup> = AgeGroup.fetchRequest()
+        ageFetch.predicate = NSPredicate(format: "%K == %@", #keyPath(AgeGroup.type), ageString)
+        
+        do {
+            let results = try CoreDataStack.shared.managedContext.fetch(ageFetch)
+          if results.count > 0 {
+            // AgeName found, Use age name
+            ageGroup = results.first
+
+          } else {
+            // Name not found, create name
+            ageGroup = AgeGroup(context: CoreDataStack.shared.managedContext)
+            ageGroup?.type = ageString
+            CoreDataStack.shared.saveContext()
+          }
+        } catch let error as NSError {
+          print("Fetch error: \(error) description: \(error.userInfo)")
+        }
+        
         vc1.currentAgeGroup = ageString
+        vc1.ageGroup = ageGroup
         vc2.currentAgeGroup = ageString
+        vc2.ageGroup = ageGroup
         
         present(vc, animated: true)
 //        navigationController?.pushViewController(vc, animated: true)
@@ -31,7 +55,7 @@ class AgeGroupViewController: UIViewController {
     }
     
     @IBAction func schoolAgePressed(_ sender: Any) {
-        segueToCaseload(ageString: "schoolAged")
+        segueToCaseload(ageString: "SchoolAged")
     }
     @IBAction func elderlyPressed(_ sender: Any) {
         segueToCaseload(ageString: "Elderly")

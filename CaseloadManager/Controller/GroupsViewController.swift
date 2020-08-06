@@ -12,6 +12,9 @@ import UIKit
 class GroupsViewController: UIViewController {
     
     var currentAgeGroup: String!
+    var ageGroup: AgeGroup?
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
     let df = DateFormatter()
